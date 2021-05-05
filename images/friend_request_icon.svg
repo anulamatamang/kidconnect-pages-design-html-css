@@ -1,0 +1,12 @@
+<svg id="friend_request_icon" data-name="friend request icon" xmlns="http://www.w3.org/2000/svg" width="38.152" height="31.322" viewBox="0 0 38.152 31.322">
+  <g id="Group_2" data-name="Group 2" transform="translate(16.068 3.082)">
+    <path id="Path_1" data-name="Path 1" d="M485.444,530.492s-1.63-11.685,10.451-12.315c7.992.177,11.56,3.755,11.56,12.315" transform="translate(-485.37 -505.335)" fill="none"/>
+    <path id="Path_2" data-name="Path 2" d="M507.454,530.492c0-8.56-3.568-12.138-11.56-12.315-12.081.63-10.451,12.315-10.451,12.315Z" transform="translate(-485.37 -505.335)" fill="#8eca71"/>
+    <ellipse id="Ellipse_2" data-name="Ellipse 2" cx="5.192" cy="5.75" rx="5.192" ry="5.75" transform="translate(5.877 0)" fill="rgba(99,186,57,0.69)"/>
+  </g>
+  <g id="Group_1" data-name="Group 1">
+    <path id="Path_1-2" data-name="Path 1" d="M485.464,533.566s-2.078-14.6,13.317-15.389c10.183.221,14.729,4.693,14.729,15.389" transform="translate(-485.37 -502.244)" fill="none"/>
+    <path id="Path_2-2" data-name="Path 2" d="M513.51,533.566c0-10.7-4.546-15.168-14.729-15.389-15.394.788-13.317,15.389-13.317,15.389Z" transform="translate(-485.37 -502.244)" fill="rgba(0,198,206,0.98)"/>
+    <ellipse id="Ellipse_2-2" data-name="Ellipse 2" cx="6.489" cy="7.159" rx="6.489" ry="7.159" transform="translate(7.545)" fill="rgba(8,193,200,0.91)"/>
+  </g>
+</svg>

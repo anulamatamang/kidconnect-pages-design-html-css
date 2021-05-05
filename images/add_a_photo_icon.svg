@@ -1,0 +1,16 @@
+<svg id="add_a_photo_icon" data-name="add a photo icon" xmlns="http://www.w3.org/2000/svg" width="73" height="55" viewBox="0 0 73 55">
+  <g id="Rectangle_27" data-name="Rectangle 27" fill="#fff" stroke="#707070" stroke-width="1">
+    <rect width="62" height="49" stroke="none"/>
+    <rect x="0.5" y="0.5" width="61" height="48" fill="none"/>
+  </g>
+  <rect id="Rectangle_28" data-name="Rectangle 28" width="53" height="39" transform="translate(5 5)" fill="#98dcff"/>
+  <path id="Path_10" data-name="Path 10" d="M-283,316.843l15.033-7.675,7.161,4.4-17.756,7.715H-283v-4.439" transform="translate(287.439 -287.159)" fill="#298fc4"/>
+  <path id="Path_9" data-name="Path 9" d="M-283.02,298.136s-.626-4.866,4.439-4.439c-.307-4.974,5.509-2.542,5.509-2.542a5.235,5.235,0,0,1,6.873-3.806,5.785,5.785,0,0,1,3.278,6.349,3.2,3.2,0,0,1,2.1-1.273,3.706,3.706,0,0,1,2.239,1.273s.74-4.009,4.547-4.439,5.393,4.439,5.393,4.439,1.143-2.224,2.538-2.542a2.381,2.381,0,0,1,3.04,2c3.207-.083,1.613,3.177,1.613,3.177s3.952-2.888,4.97,1.8c1.1-4.015,3.218-2.523,3.912-1.8,2.723-1.589,2.822,1.8,2.822,1.8v13.317l-24.287-10.782-6.786,2.961-7.383-4.441-14.811,7.823Z" transform="translate(287.458 -276.847)" fill="#d8f6ff"/>
+  <path id="Polygon_4" data-name="Polygon 4" d="M24,0,48,11H0Z" transform="translate(10 23)" fill="#255e7b"/>
+  <g id="Ellipse_13" data-name="Ellipse 13" transform="translate(39 21)" fill="#9ceba5" stroke="#8fac80" stroke-width="2">
+    <circle cx="17" cy="17" r="17" stroke="none"/>
+    <circle cx="17" cy="17" r="16" fill="none"/>
+  </g>
+  <line id="Line_3" data-name="Line 3" y2="22" transform="translate(56 27)" fill="none" stroke="#fff" stroke-width="4"/>
+  <line id="Line_4" data-name="Line 4" x2="22" transform="translate(45 38)" fill="none" stroke="#fff" stroke-width="4"/>
+</svg>
