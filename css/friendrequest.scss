@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #08c1c8;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #fafafa;
+  margin: 0;
+  font-family: 'Poppins';
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+.navbar {
+  background-color: white;
+  height: 50px;
+
+  width: 100%;
+
+  box-shadow: 0px 0px 6px #cfc8c8;
+
+  a {
+    display: inline-block;
+    line-height: 1;
+    margin-top: 2px;
+  }
+  .logo {
+    vertical-align: bottom;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.logoAndSearch {
+  display: flex;
+}
+
+.search {
+  height: 40px;
+  width: 320px;
+  background-color: #efefef;
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-bottom: 5px;
+  border-radius: 1000px;
+  display: flex;
+  align-items: center;
+
+  img {
+    width: 20px;
+    margin-left: 10px;
+  }
+
+  input {
+    margin-left: 10px;
+    width: 250px;
+    background-color: #efefef;
+    border: none;
+
+    &:focus {
+      outline: none;
+      &::placeholder {
+        color: transparent;
+      }
+    }
+  }
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  font-size: medium;
+  color: #707070;
+
+  // background-color: #efefef;
+  font-size: medium;
+
+  li {
+    display: flex;
+    align-items: center;
+    // margin-right: 16px;
+    margin: 0 10px;
+  }
+
+  .icon {
+    width: 25px;
+    margin-right: 10px;
+  }
+
+  .profile-image {
+    width: 30px;
+    height: 30px;
+    border-radius: 1000px;
+  }
+}
+
+.right-nav {
+  .icon {
+    width: 20px;
+  }
+}
+
+.btn-danger {
+  outline: none;
+  cursor: pointer;
+  padding: 0.5em 1em;
+  border-radius: 0.3em;
+  background-color: hsl(0, 60%, 50%);
+  border-color: hsl(0, 60%, 30%);
+  color: white;
+  align-self: flex-start;
+  margin-top: 8px;
+  &:hover,
+  &:focus {
+    background-color: hsl(0, 60%, 40%);
+    box-shadow: 0 0 5px 0 hsl(0, 60%, 30%);
+  }
+}
+
+.profile-image-name {
+  align-self: flex-start;
+
+  margin-top: 5px;
+  margin: 4px;
+  border-radius: 10000px;
+
+  &:hover {
+    background-color: #ececec;
+  }
+
+  .profile-image {
+    margin-right: 10px;
+  }
+}
+
+.icon-description:hover {
+  background-color: #ececec;
+}
+
+.button {
+  padding: 0.5em 1.2em;
+  border-radius: 0.2em;
+  border: none;
+  font-size: 16px;
+  font-weight: 400;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.friendrequest-container {
+  display: grid;
+  grid-template-columns: 350px auto;
+
+  width: 100vw;
+  height: calc(100% - 50px);
+
+  .friendrequest-list {
+    background-color: white;
+    box-shadow: 1px 3px 6px #cfc8c8;
+
+    .container {
+      margin-left: 1.5em;
+      height: 100%;
+
+      h3 {
+        font-weight: 500;
+        font-size: 24px;
+        padding-top: 0.5em;
+      }
+
+      p {
+        padding-top: 0.3em;
+      }
+
+      .request_container {
+        height: 80%;
+
+        overflow-y: auto;
+      }
+    }
+
+    img {
+      width: 66px;
+      height: 66px;
+      border-radius: 1000px;
+    }
+    .requests {
+      display: inline-block;
+      width: 100%;
+    }
+
+    li {
+      display: grid;
+      width: 100%;
+      grid-template-columns: 0.3fr auto;
+      margin: 0;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      img {
+        margin-right: 1em;
+      }
+
+      .name_and_buttons {
+        height: 110px;
+        padding-top: 2em;
+      }
+
+      .name_and_request_day {
+        display: flex;
+        justify-content: space-around;
+
+        .name {
+          margin-right: 2.5em;
+          color: black;
+          font-weight: 500;
+        }
+
+        .day {
+          font-size: 14px;
+        }
+      }
+
+      .buttons {
+        padding-top: 1em;
+        display: flex;
+        justify-content: space-around;
+
+        .confirm {
+          background-color: var(--primary-color);
+          color: white;
+        }
+
+        .delete {
+          background-color: #c2c2c2;
+        }
+      }
+    }
+  }
+
+  .profile-preview {
+    background-color: inherit;
+    position: relative;
+
+    p {
+      font-size: 26px;
+      font-weight: 500;
+      color: #706565;
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

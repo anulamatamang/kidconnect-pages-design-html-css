@@ -1,0 +1,308 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+:root {
+  --primary-color: #08c1c8;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #fafafa;
+  margin: 0;
+  font-family: 'Poppins';
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+.navbar {
+  background-color: white;
+  height: 50px;
+  width: 100%;
+  -webkit-box-shadow: 0px 0px 6px #cfc8c8;
+          box-shadow: 0px 0px 6px #cfc8c8;
+}
+
+.navbar a {
+  display: inline-block;
+  line-height: 1;
+  margin-top: 2px;
+}
+
+.navbar .logo {
+  vertical-align: bottom;
+}
+
+.navbar .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.logoAndSearch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.search {
+  height: 40px;
+  width: 320px;
+  background-color: #efefef;
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-bottom: 5px;
+  border-radius: 1000px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.search img {
+  width: 20px;
+  margin-left: 10px;
+}
+
+.search input {
+  margin-left: 10px;
+  width: 250px;
+  background-color: #efefef;
+  border: none;
+}
+
+.search input:focus {
+  outline: none;
+}
+
+.search input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.search input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.search input:focus::-ms-input-placeholder {
+  color: transparent;
+}
+
+.search input:focus::placeholder {
+  color: transparent;
+}
+
+ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-size: medium;
+  color: #707070;
+  font-size: medium;
+}
+
+ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 10px;
+}
+
+ul .icon {
+  width: 25px;
+  margin-right: 10px;
+}
+
+ul .profile-image {
+  width: 30px;
+  height: 30px;
+  border-radius: 1000px;
+}
+
+.right-nav .icon {
+  width: 20px;
+}
+
+.btn-danger {
+  outline: none;
+  cursor: pointer;
+  padding: 0.5em 1em;
+  border-radius: 0.3em;
+  background-color: #cc3333;
+  border-color: #7a1f1f;
+  color: white;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-top: 8px;
+}
+
+.btn-danger:hover, .btn-danger:focus {
+  background-color: #a32929;
+  -webkit-box-shadow: 0 0 5px 0 #7a1f1f;
+          box-shadow: 0 0 5px 0 #7a1f1f;
+}
+
+.profile-image-name {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-top: 5px;
+  margin: 4px;
+  border-radius: 10000px;
+}
+
+.profile-image-name:hover {
+  background-color: #ececec;
+}
+
+.profile-image-name .profile-image {
+  margin-right: 10px;
+}
+
+.icon-description:hover {
+  background-color: #ececec;
+}
+
+.button {
+  padding: 0.5em 1.2em;
+  border-radius: 0.2em;
+  border: none;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.friendrequest-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 350px auto;
+      grid-template-columns: 350px auto;
+  width: 100vw;
+  height: calc(100% - 50px);
+}
+
+.friendrequest-container .friendrequest-list {
+  background-color: white;
+  -webkit-box-shadow: 1px 3px 6px #cfc8c8;
+          box-shadow: 1px 3px 6px #cfc8c8;
+}
+
+.friendrequest-container .friendrequest-list .container {
+  margin-left: 1.5em;
+  height: 100%;
+}
+
+.friendrequest-container .friendrequest-list .container h3 {
+  font-weight: 500;
+  font-size: 24px;
+  padding-top: 0.5em;
+}
+
+.friendrequest-container .friendrequest-list .container p {
+  padding-top: 0.3em;
+}
+
+.friendrequest-container .friendrequest-list .container .request_container {
+  height: 80%;
+  overflow-y: auto;
+}
+
+.friendrequest-container .friendrequest-list img {
+  width: 66px;
+  height: 66px;
+  border-radius: 1000px;
+}
+
+.friendrequest-container .friendrequest-list .requests {
+  display: inline-block;
+  width: 100%;
+}
+
+.friendrequest-container .friendrequest-list li {
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+  -ms-grid-columns: 0.3fr auto;
+      grid-template-columns: 0.3fr auto;
+  margin: 0;
+}
+
+.friendrequest-container .friendrequest-list li:hover {
+  cursor: pointer;
+}
+
+.friendrequest-container .friendrequest-list li img {
+  margin-right: 1em;
+}
+
+.friendrequest-container .friendrequest-list li .name_and_buttons {
+  height: 110px;
+  padding-top: 2em;
+}
+
+.friendrequest-container .friendrequest-list li .name_and_request_day {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.friendrequest-container .friendrequest-list li .name_and_request_day .name {
+  margin-right: 2.5em;
+  color: black;
+  font-weight: 500;
+}
+
+.friendrequest-container .friendrequest-list li .name_and_request_day .day {
+  font-size: 14px;
+}
+
+.friendrequest-container .friendrequest-list li .buttons {
+  padding-top: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.friendrequest-container .friendrequest-list li .buttons .confirm {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.friendrequest-container .friendrequest-list li .buttons .delete {
+  background-color: #c2c2c2;
+}
+
+.friendrequest-container .profile-preview {
+  background-color: inherit;
+  position: relative;
+}
+
+.friendrequest-container .profile-preview p {
+  font-size: 26px;
+  font-weight: 500;
+  color: #706565;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+/*# sourceMappingURL=friendrequest.css.map */
