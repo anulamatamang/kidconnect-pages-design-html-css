@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #08c1c8;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #fafafa;
+
+  font-family: 'Poppins';
+  box-sizing: border-box;
+  height: 100vh;
+}
+
+.hide {
+  display: none;
+}
+
+.navbar {
+  background-color: white;
+  height: 50px;
+  box-shadow: 0px 0px 6px #cfc8c8;
+
+  a {
+    display: inline-block;
+    line-height: 1;
+    margin-top: 2px;
+  }
+  .logo {
+    vertical-align: bottom;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.logoAndSearch {
+  display: flex;
+}
+
+.search {
+  height: 40px;
+  width: 320px;
+  background-color: #efefef;
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-bottom: 5px;
+  border-radius: 1000px;
+  display: flex;
+  align-items: center;
+
+  img {
+    width: 20px;
+    margin-left: 10px;
+  }
+
+  input {
+    margin-left: 10px;
+    width: 250px;
+    background-color: #efefef;
+    border: none;
+
+    &:focus {
+      outline: none;
+      &::placeholder {
+        color: transparent;
+      }
+    }
+  }
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  font-size: medium;
+  color: #707070;
+
+  // background-color: #efefef;
+  font-size: medium;
+
+  li {
+    display: flex;
+    align-items: center;
+    // margin-right: 16px;
+    padding: 0 10px;
+  }
+
+  .li-a {
+    text-decoration: none;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    color: #707070;
+  }
+
+  .icon {
+    width: 25px;
+    margin-right: 10px;
+  }
+
+  .profile-image {
+    width: 30px;
+    height: 30px;
+    border-radius: 1000px;
+  }
+}
+
+.right-nav {
+  .icon {
+    width: 20px;
+  }
+}
+
+.btn-danger {
+  outline: none;
+  cursor: pointer;
+  padding: 0.5em 1em;
+  border-radius: 0.3em;
+  background-color: hsl(0, 60%, 50%);
+  border-color: hsl(0, 60%, 30%);
+  color: white;
+  align-self: flex-start;
+  margin-top: 8px;
+  &:hover,
+  &:focus {
+    background-color: hsl(0, 60%, 40%);
+    box-shadow: 0 0 5px 0 hsl(0, 60%, 30%);
+  }
+}
+
+.profile-image-name {
+  align-self: flex-start;
+
+  margin-top: 5px;
+  padding: 4px;
+  border-radius: 10000px;
+
+  &:hover {
+    background-color: #ececec;
+  }
+
+  .profile-image {
+    margin-right: 10px;
+  }
+}
+
+.icon-description:hover {
+  background-color: #ececec;
+}
+
+//navbar css ends here
+
+//edit-profile-container
+
+.border-left {
+  border-left: 2px solid black;
+}
+
+.edit-profile-container {
+  width: 70%;
+  height: 90vh;
+  background-color: white;
+  margin: 1.5em auto 0 auto;
+
+  display: grid;
+  grid-template-columns: 30% 70%;
+
+  .edit-profile-and-change-password-menu-container {
+    height: 100%;
+
+    min-width: fit-content;
+
+    border: 1px solid #ececec;
+
+    & > div {
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+  }
+
+  .edit-profile-or-change-password-container {
+    height: 100%;
+    min-width: fit-content;
+    border: 1px solid #ececec;
+    border-left: none;
+
+    .edit-profile {
+      padding-left: 8em;
+      padding-top: 2.5em;
+
+      .edit-profile-header {
+        display: flex;
+        .profile-img {
+          height: 100px;
+          width: 100px;
+          border-radius: 10000px;
+          border: 1px solid #c2c2c2;
+
+          object-fit: cover;
+        }
+
+        .name-and-change-profile-photo {
+          margin-top: 1em;
+          margin-left: 3.5em;
+          .name {
+            color: #262626;
+            font-weight: 400;
+            font-size: 18px;
+          }
+
+          .change-profile-photo {
+            font-size: 14px;
+            font-weight: 500;
+            margin-top: 1em;
+            color: var(--primary-color);
+          }
+        }
+      }
+
+      form {
+        margin-top: 2em;
+        .help-info {
+          height: auto;
+          width: 100%;
+          display: flex;
+          justify-content: flex-end;
+          margin-bottom: 1em;
+          p {
+            width: 320px;
+            font-size: 13px;
+            margin-right: 6.5em;
+            color: #7b7a7a;
+            font-weight: 500;
+          }
+        }
+
+        .row {
+          display: flex;
+          align-items: flex-start;
+          margin-bottom: 1em;
+
+          .label > label {
+            color: #262626;
+            font-weight: 500;
+          }
+
+          input {
+            width: 300px;
+            height: 35px;
+            border: 1px solid #cfc8c8;
+            border-radius: 3px;
+
+            &:focus {
+              border: 1px solid var(--primary-color);
+              box-shadow: 0 0 2px var(--primary-color);
+              outline: none;
+            }
+          }
+          textarea {
+            width: 300px;
+            border: 1px solid #cfc8c8;
+            border-radius: 3px;
+            &:focus {
+              border: 1px solid var(--primary-color);
+              box-shadow: 0 0 3px var(--primary-color);
+              outline: none;
+            }
+          }
+          .label {
+            width: 35%;
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 15%;
+          }
+        }
+      }
+    }
+
+    //css for change-password section
+
+    .change-password {
+      padding: 2.5em 0 8em 0;
+      padding-left: 8em;
+
+      .change-password-header {
+        display: flex;
+        img {
+          height: 100px;
+          width: 100px;
+          border-radius: 10000px;
+          border: 1px solid #c2c2c2;
+
+          object-fit: cover;
+        }
+        .name {
+          color: #262626;
+          font-weight: 400;
+          font-size: 18px;
+
+          padding-top: 2em;
+          padding-left: 3em;
+        }
+      }
+
+      .change-password-form {
+        margin-top: 1.5em;
+
+        .row {
+          margin-bottom: 1em;
+          display: flex;
+          .label {
+            width: 120px;
+            height: auto;
+          }
+        }
+        input {
+          width: 300px;
+          height: 35px;
+          border: 1px solid #cfc8c8;
+          border-radius: 3px;
+          margin-left: 3em;
+
+          &:focus {
+            border: 1px solid var(--primary-color);
+            box-shadow: 0 0 2px var(--primary-color);
+            outline: none;
+          }
+        }
+
+        .change-password-btn {
+          padding: 0.5em 1em;
+          font-size: 16px;
+          border-radius: 5px;
+          border: none;
+          background-color: rgba($color: #00c6ce, $alpha: 0.3);
+          color: white;
+          margin: 1em 0 0 10em;
+
+          &:focus,
+          &:hover {
+            cursor: pointer;
+            background-color: #00c6ce;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,424 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+:root {
+  --primary-color: #08c1c8;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #fafafa;
+  font-family: 'Poppins';
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 100vh;
+}
+
+.hide {
+  display: none;
+}
+
+.navbar {
+  background-color: white;
+  height: 50px;
+  -webkit-box-shadow: 0px 0px 6px #cfc8c8;
+          box-shadow: 0px 0px 6px #cfc8c8;
+}
+
+.navbar a {
+  display: inline-block;
+  line-height: 1;
+  margin-top: 2px;
+}
+
+.navbar .logo {
+  vertical-align: bottom;
+}
+
+.navbar .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.logoAndSearch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.search {
+  height: 40px;
+  width: 320px;
+  background-color: #efefef;
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-bottom: 5px;
+  border-radius: 1000px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.search img {
+  width: 20px;
+  margin-left: 10px;
+}
+
+.search input {
+  margin-left: 10px;
+  width: 250px;
+  background-color: #efefef;
+  border: none;
+}
+
+.search input:focus {
+  outline: none;
+}
+
+.search input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.search input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.search input:focus::-ms-input-placeholder {
+  color: transparent;
+}
+
+.search input:focus::placeholder {
+  color: transparent;
+}
+
+ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-size: medium;
+  color: #707070;
+  font-size: medium;
+}
+
+ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 10px;
+}
+
+ul .li-a {
+  text-decoration: none;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #707070;
+}
+
+ul .icon {
+  width: 25px;
+  margin-right: 10px;
+}
+
+ul .profile-image {
+  width: 30px;
+  height: 30px;
+  border-radius: 1000px;
+}
+
+.right-nav .icon {
+  width: 20px;
+}
+
+.btn-danger {
+  outline: none;
+  cursor: pointer;
+  padding: 0.5em 1em;
+  border-radius: 0.3em;
+  background-color: #cc3333;
+  border-color: #7a1f1f;
+  color: white;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-top: 8px;
+}
+
+.btn-danger:hover, .btn-danger:focus {
+  background-color: #a32929;
+  -webkit-box-shadow: 0 0 5px 0 #7a1f1f;
+          box-shadow: 0 0 5px 0 #7a1f1f;
+}
+
+.profile-image-name {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-top: 5px;
+  padding: 4px;
+  border-radius: 10000px;
+}
+
+.profile-image-name:hover {
+  background-color: #ececec;
+}
+
+.profile-image-name .profile-image {
+  margin-right: 10px;
+}
+
+.icon-description:hover {
+  background-color: #ececec;
+}
+
+.border-left {
+  border-left: 2px solid black;
+}
+
+.edit-profile-container {
+  width: 70%;
+  height: 90vh;
+  background-color: white;
+  margin: 1.5em auto 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 30% 70%;
+      grid-template-columns: 30% 70%;
+}
+
+.edit-profile-container .edit-profile-and-change-password-menu-container {
+  height: 100%;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  border: 1px solid #ececec;
+}
+
+.edit-profile-container .edit-profile-and-change-password-menu-container > div {
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.edit-profile-container .edit-profile-or-change-password-container {
+  height: 100%;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  border: 1px solid #ececec;
+  border-left: none;
+}
+
+.edit-profile-container .edit-profile-or-change-password-container .edit-profile {
+  padding-left: 8em;
+  padding-top: 2.5em;
+}
+
+.edit-profile-container .edit-profile-or-change-password-container .edit-profile .edit-profile-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.edit-profile-container .edit-profile-or-change-password-container .edit-profile .edit-profile-header .profile-img {
+  height: 100px;
+  width: 100px;
+  border-radius: 10000px;
+  border: 1px solid #c2c2c2;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.edit-profile-container .edit-profile-or-change-password-container .edit-profile .edit-profile-header .name-and-change-profile-photo {
+  margin-top: 1em;
+  margin-left: 3.5em;
+}
+
+.edit-profile-container .edit-profile-or-change-password-container .edit-profile .edit-profile-header .name-and-change-profile-photo .name {
+  color: #262626;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.edit-profile-container .edit-profile-or-change-password-container .edit-profile .edit-profile-header .name-and-change-profile-photo .change-profile-photo {
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 1em;
+  color: var(--primary-color);
+}
+
+.edit-profile-container .edit-profile-or-change-password-container .edit-profile form {
+  margin-top: 2em;
+}
+
+.edit-profile-container .edit-profile-or-change-password-container .edit-profile form .help-info {
+  height: auto;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-bottom: 1em;
+}
+
+.edit-profile-container .edit-profile-or-change-password-container .edit-profile form .help-info p {
+  width: 320px;
+  font-size: 13px;
+  margin-right: 6.5em;
+  color: #7b7a7a;
+  font-weight: 500;
+}
+
+.edit-profile-container .edit-profile-or-change-password-container .edit-profile form .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 1em;
+}
+
+.edit-profile-container .edit-profile-or-change-password-container .edit-profile form .row .label > label {
+  color: #262626;
+  font-weight: 500;
+}
+
+.edit-profile-container .edit-profile-or-change-password-container .edit-profile form .row input {
+  width: 300px;
+  height: 35px;
+  border: 1px solid #cfc8c8;
+  border-radius: 3px;
+}
+
+.edit-profile-container .edit-profile-or-change-password-container .edit-profile form .row input:focus {
+  border: 1px solid var(--primary-color);
+  -webkit-box-shadow: 0 0 2px var(--primary-color);
+          box-shadow: 0 0 2px var(--primary-color);
+  outline: none;
+}
+
+.edit-profile-container .edit-profile-or-change-password-container .edit-profile form .row textarea {
+  width: 300px;
+  border: 1px solid #cfc8c8;
+  border-radius: 3px;
+}
+
+.edit-profile-container .edit-profile-or-change-password-container .edit-profile form .row textarea:focus {
+  border: 1px solid var(--primary-color);
+  -webkit-box-shadow: 0 0 3px var(--primary-color);
+          box-shadow: 0 0 3px var(--primary-color);
+  outline: none;
+}
+
+.edit-profile-container .edit-profile-or-change-password-container .edit-profile form .row .label {
+  width: 35%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-right: 15%;
+}
+
+.edit-profile-container .edit-profile-or-change-password-container .change-password {
+  padding: 2.5em 0 8em 0;
+  padding-left: 8em;
+}
+
+.edit-profile-container .edit-profile-or-change-password-container .change-password .change-password-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.edit-profile-container .edit-profile-or-change-password-container .change-password .change-password-header img {
+  height: 100px;
+  width: 100px;
+  border-radius: 10000px;
+  border: 1px solid #c2c2c2;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.edit-profile-container .edit-profile-or-change-password-container .change-password .change-password-header .name {
+  color: #262626;
+  font-weight: 400;
+  font-size: 18px;
+  padding-top: 2em;
+  padding-left: 3em;
+}
+
+.edit-profile-container .edit-profile-or-change-password-container .change-password .change-password-form {
+  margin-top: 1.5em;
+}
+
+.edit-profile-container .edit-profile-or-change-password-container .change-password .change-password-form .row {
+  margin-bottom: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.edit-profile-container .edit-profile-or-change-password-container .change-password .change-password-form .row .label {
+  width: 120px;
+  height: auto;
+}
+
+.edit-profile-container .edit-profile-or-change-password-container .change-password .change-password-form input {
+  width: 300px;
+  height: 35px;
+  border: 1px solid #cfc8c8;
+  border-radius: 3px;
+  margin-left: 3em;
+}
+
+.edit-profile-container .edit-profile-or-change-password-container .change-password .change-password-form input:focus {
+  border: 1px solid var(--primary-color);
+  -webkit-box-shadow: 0 0 2px var(--primary-color);
+          box-shadow: 0 0 2px var(--primary-color);
+  outline: none;
+}
+
+.edit-profile-container .edit-profile-or-change-password-container .change-password .change-password-form .change-password-btn {
+  padding: 0.5em 1em;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgba(0, 198, 206, 0.3);
+  color: white;
+  margin: 1em 0 0 10em;
+}
+
+.edit-profile-container .edit-profile-or-change-password-container .change-password .change-password-form .change-password-btn:focus, .edit-profile-container .edit-profile-or-change-password-container .change-password .change-password-form .change-password-btn:hover {
+  cursor: pointer;
+  background-color: #00c6ce;
+}
+/*# sourceMappingURL=edit-profile.css.map */

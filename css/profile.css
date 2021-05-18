@@ -132,6 +132,7 @@ ul .li-a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  color: #707070;
 }
 
 ul .icon {
@@ -538,7 +539,6 @@ ul .profile-image {
   height: 50vh;
   background-color: white;
   border-radius: 5px;
-  overflow-y: auto;
 }
 
 .friends-container .friends-container-header {
@@ -636,11 +636,13 @@ ul .profile-image {
 .friends-container .friends-list {
   margin-top: 1em;
   margin-left: 0.5em;
+  height: 85%;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
   grid-gap: 10px;
+  overflow-y: auto;
 }
 
 .friends-container .friends-list .unfriend-btn {

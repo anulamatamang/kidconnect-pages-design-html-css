@@ -101,6 +101,7 @@ ul {
     margin: 0;
     display: flex;
     align-items: center;
+    color: #707070;
   }
 
   .icon {
@@ -477,7 +478,6 @@ ul {
   height: 50vh;
   background-color: white;
   border-radius: 5px;
-  overflow-y: auto;
 
   .friends-container-header {
     display: flex;
@@ -547,9 +547,11 @@ ul {
   .friends-list {
     margin-top: 1em;
     margin-left: 0.5em;
+    height: 85%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
+    overflow-y: auto;
 
     .unfriend-btn {
       display: flex;
