@@ -158,6 +158,44 @@ ul {
   background-color: #ececec;
 }
 
+.container-divider-line {
+  // height: 1px;
+  // border: none;
+  // border-top: 1px solid #cfc8c8;
+  // border-bottom: none;
+
+  background-color: #cfc8c8;
+  border: none;
+  height: 1px;
+  margin: 0px;
+
+  width: 100%;
+}
+
+.bold-line {
+  width: 100%;
+
+  height: 2px;
+  border-width: 0;
+  background-color: black;
+}
+
+.primary-hr {
+  width: 100%;
+
+  height: 2px;
+  border-width: 0;
+  background-color: var(--primary-color);
+}
+
+.divider-line {
+  height: 1px;
+  border-width: 0;
+  background-color: #ececec;
+  width: 95%;
+  margin: 10px auto;
+}
+
 /* profile-body css*/
 
 .profile-body {
@@ -166,7 +204,7 @@ ul {
   overflow-y: auto;
 
   .profile-container {
-    width: 70%;
+    width: 60%;
     height: 100%;
 
     margin: 0 auto;
@@ -212,7 +250,8 @@ ul {
           .edit-profile-btn {
             padding: 0.5em 1em;
             border-radius: 5px;
-            border: 1px solid #707070;
+            border: 1px solid #cfc8c8;
+            letter-spacing: 1px;
             color: #343434;
             font-size: 14px;
             font-weight: 400;
@@ -242,25 +281,11 @@ ul {
 
       // text-align: center;
 
-      .divider-line {
-        margin: 0;
-        height: 1px;
-        border-width: 0;
-        background-color: #cfc8c8;
-        width: 100%;
-      }
-
       .title-and-hr {
         display: inline-block;
         margin-left: 30%;
 
-        .bold-line {
-          width: 100%;
-
-          height: 2px;
-          border-width: 0;
-          background-color: black;
-        }
+        //bold-line css thiyo paila
 
         .about-span {
           text-transform: uppercase;
@@ -296,86 +321,40 @@ ul {
         margin-left: -2.7em;
       }
     }
-  }
-}
 
-.homepage-feed {
-  width: 100vw;
-  height: calc(100% - 50px);
-  overflow-y: auto;
-}
+    // css for about-container ends
 
-.homepage-container {
-  width: 750px;
-  height: 100%;
-  margin: 10px auto 0 auto;
-}
+    /*CSS for posts-and-friends-container*/
+    .posts-and-friends-container {
+      width: 100%;
+      margin-top: 1.5em;
 
-.create-post-container {
-  background-color: white;
-  border: 1px solid #ececec;
-  // margin-top: 1em;
-  border-radius: 5px;
+      .posts-and-friends-ul {
+        margin-left: 30%;
 
-  .create-post-header img {
-    width: 50px;
-    height: 50px;
-    border-radius: 10em;
-  }
+        .profile-nav {
+          margin-right: 1em;
+        }
+        margin-bottom: 1em;
+      }
 
-  input {
-    width: 85%;
-    height: 2.5em;
-    margin-left: 1em;
-    border-radius: 10em;
-    background-color: #efefef;
-    border: none;
-    padding-left: 1em;
-    font-size: 1em;
-
-    &:focus {
-      outline: none;
-      &::placeholder {
-        color: transparent;
+      .li-div h3 {
+        text-transform: uppercase;
+        margin-top: 0.2em;
+        font-size: 22px;
+        font-weight: 400;
+        color: #343434;
       }
     }
-  }
-
-  .create-post-header {
-    display: flex;
-    align-items: center;
-    padding-top: 0.5em;
-    padding-left: 0.5em;
-  }
-}
-
-.divider-line {
-  height: 1px;
-  border-width: 0;
-  background-color: #ececec;
-  width: 95%;
-  margin: 10px auto;
-}
-
-.create-post-bottom {
-  padding-left: 0.5em;
-  display: flex;
-  align-items: center;
-  padding: 0.5em 0 0.5em 1em;
-
-  img {
-    width: 35px;
-  }
-  span {
-    font-size: small;
-    color: #343434;
-    margin-left: 0.5em;
   }
 }
 
 .post-container {
   background-color: inherit;
   margin-top: 1em;
+
+  width: 70%;
+  margin: 0 auto;
 
   .post {
     margin-bottom: 1em;
@@ -391,6 +370,7 @@ ul {
       img {
         width: 50px;
         height: 50px;
+        object-fit: cover;
         border-radius: 10em;
       }
 
@@ -462,6 +442,7 @@ ul {
       img {
         width: 50px;
         height: 50px;
+        object-fit: cover;
         border-radius: 10em;
       }
 
@@ -486,6 +467,147 @@ ul {
       .action-post {
         margin-left: 1em;
         color: var(--primary-color);
+      }
+    }
+  }
+}
+
+.friends-container {
+  width: 100%;
+  height: 50vh;
+  background-color: white;
+  border-radius: 5px;
+  overflow-y: auto;
+
+  .friends-container-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0.5em;
+
+    h3 {
+      color: var(--primary-color);
+      font-size: 16px;
+      font-weight: 400;
+    }
+
+    .friends-header-left {
+      margin-left: 1em;
+
+      h3 {
+        margin-bottom: 0.3em;
+      }
+    }
+
+    .friends-header-right {
+      display: flex;
+      align-items: center;
+      margin-right: 1em;
+
+      .search-div {
+        height: 35px;
+        width: 270px;
+        background-color: #efefef;
+        margin-top: 5px;
+        margin-left: 10px;
+        margin-bottom: 5px;
+        border-radius: 1000px;
+        display: flex;
+        align-items: center;
+        margin-right: 1em;
+
+        img {
+          width: 18px;
+          margin-left: 10px;
+        }
+
+        input {
+          margin-left: 10px;
+          width: 250px;
+          background-color: #efefef;
+          border: none;
+          font-size: 14px;
+
+          &:focus {
+            outline: none;
+            &::placeholder {
+              color: transparent;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .friend-profile-img {
+    height: 100px;
+    width: 150px;
+  }
+
+  .friends-list {
+    margin-top: 1em;
+    margin-left: 0.5em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+
+    .unfriend-btn {
+      display: flex;
+      align-items: center;
+      padding: 0.5em 0.8em;
+      color: #7b7a7a;
+      font-size: 16px;
+      border: 1px solid #c2c2c2;
+      border-radius: 5px;
+
+      .unfriend-icon {
+        height: 25px;
+        margin-right: 0.5em;
+      }
+    }
+
+    .friend-tab {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+
+      border: 1px solid #e5e5e5;
+
+      width: 430px;
+      height: 100px;
+
+      border-radius: 5px;
+
+      img {
+        width: 100px;
+        height: 80px;
+        border-radius: 5px;
+      }
+
+      .name {
+        font-size: 18px;
+        font-weight: 400;
+        color: #030303;
+      }
+
+      span {
+        color: #676767;
+        font-size: 14px;
+      }
+
+      .mutual-friends-no {
+        margin-right: 0.4em;
+      }
+
+      .unfriend-btn {
+        width: 130px;
+        align-self: flex-start;
+        margin-top: 1em;
+
+        &:hover {
+          background-color: #c2c2c2;
+          cursor: pointer;
+        }
       }
     }
   }
