@@ -176,8 +176,9 @@ ul .profile-image {
 .profile-image-name {
   -ms-flex-item-align: start;
       align-self: flex-start;
-  border-radius: 10000px;
   margin: auto;
+  padding: 2px 5px;
+  border-radius: 10000px;
 }
 
 .profile-image-name:hover {
@@ -186,6 +187,8 @@ ul .profile-image {
 
 .profile-image-name .profile-image {
   margin-right: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .icon-description:hover {
@@ -321,7 +324,7 @@ ul .profile-image {
   color: #706565;
   position: absolute;
   top: 30%;
-  left: 25%;
+  left: 20%;
 }
 
 .hide {
@@ -494,4 +497,4 @@ ul .profile-image {
   font-size: 14px;
   color: #343434;
 }
-/*# sourceMappingURL=friendrequest.css.map */
+/*# sourceMappingURL=friendrequestcopy.css.map */

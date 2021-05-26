@@ -149,10 +149,9 @@ ul {
 .profile-image-name {
   align-self: flex-start;
 
-  // margin-top: 5px;
-  // margin: 4px;
-  border-radius: 10000px;
   margin: auto;
+  padding: 2px 5px;
+  border-radius: 10000px;
 
   &:hover {
     background-color: #ececec;
@@ -160,6 +159,7 @@ ul {
 
   .profile-image {
     margin-right: 10px;
+    object-fit: cover;
   }
 }
 
@@ -285,7 +285,7 @@ ul {
       color: #706565;
       position: absolute;
       top: 30%;
-      left: 25%;
+      left: 20%;
     }
   }
 }
