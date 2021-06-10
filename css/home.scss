@@ -27,7 +27,7 @@ body {
 .navbar-desktop {
   background-color: white;
   height: 50px;
-  box-shadow: 0px 0px 6px #cfc8c8;
+  box-shadow: 0px 0px 3px #cfc8c8;
 
   //new css content to make fixed navbar
   overflow: hidden;
@@ -102,6 +102,7 @@ ul {
     align-items: center;
     // margin-right: 16px;
     padding: 0 10px;
+    // position: relative;
   }
 
   .li-a {
@@ -110,6 +111,29 @@ ul {
     display: flex;
     align-items: center;
     color: #707070;
+    position: relative;
+
+    .friend-request-badge {
+      position: absolute;
+      top: -8px;
+      left: 18px;
+      color: white;
+      background-color: rgb(248, 41, 41);
+      padding: 3px 5px;
+      font-size: 12px;
+      border-radius: 10000px;
+    }
+    .notification-badge,
+    .message-badge {
+      position: absolute;
+      top: -8px;
+      left: 12px;
+      color: white;
+      background-color: rgb(248, 41, 41);
+      padding: 3px 5px;
+      font-size: 12px;
+      border-radius: 10000px;
+    }
   }
 
   .icon {
@@ -437,9 +461,23 @@ ul {
     height: 100%;
     text-decoration: none;
     color: var(--links-color);
+    position: relative;
 
     &:hover {
       background-color: var(--search-background-color);
+    }
+
+    .message-badge,
+    .notification-badge,
+    .friend-request-badge {
+      position: absolute;
+      top: 1px;
+      left: 20px;
+      color: white;
+      background-color: rgb(248, 41, 41);
+      padding: 1px 5px;
+      font-size: 12px;
+      border-radius: 10000px;
     }
 
     img {
@@ -517,7 +555,7 @@ ul {
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1230px) {
   .navbar-desktop {
     display: none;
   }
@@ -635,6 +673,20 @@ ul {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 40px;
     gap: 15px;
+
+    a {
+      position: relative;
+      .badge {
+        position: absolute;
+        top: -5px;
+        left: 18px;
+        color: white;
+        background-color: rgb(248, 41, 41);
+        padding: 1px 5px;
+        font-size: 12px;
+        border-radius: 10000px;
+      }
+    }
   }
 
   .grid-div {
@@ -644,6 +696,7 @@ ul {
     justify-content: center;
     //padding-top: 10px;
     border-radius: 3px;
+    padding-top: 5px;
     &:hover {
       background-color: var(--search-background-color);
     }

@@ -2,6 +2,8 @@
 
 :root {
   --primary-color: #08c1c8;
+  --links-color: #707070;
+  --search-background-color: #efefef;
 }
 
 * {
@@ -16,16 +18,27 @@ body {
   font-family: 'Poppins';
   box-sizing: border-box;
   height: 100vh;
+  overflow-y: hidden;
 }
 
 .hide {
   display: none;
 }
 
-.navbar {
+.w-100 {
+  width: 100%;
+}
+
+.navbar-desktop {
   background-color: white;
   height: 50px;
-  box-shadow: 0px 0px 6px #cfc8c8;
+  box-shadow: 0px 0px 3px #cfc8c8;
+
+  //new css content to make fixed navbar
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
 
   a {
     display: inline-block;
@@ -94,6 +107,7 @@ ul {
     align-items: center;
     // margin-right: 16px;
     padding: 0 10px;
+    // position: relative;
   }
 
   .li-a {
@@ -102,6 +116,29 @@ ul {
     display: flex;
     align-items: center;
     color: #707070;
+    position: relative;
+
+    .friend-request-badge {
+      position: absolute;
+      top: -8px;
+      left: 18px;
+      color: white;
+      background-color: rgb(248, 41, 41);
+      padding: 3px 5px;
+      font-size: 12px;
+      border-radius: 10000px;
+    }
+    .notification-badge,
+    .message-badge {
+      position: absolute;
+      top: -8px;
+      left: 12px;
+      color: white;
+      background-color: rgb(248, 41, 41);
+      padding: 3px 5px;
+      font-size: 12px;
+      border-radius: 10000px;
+    }
   }
 
   .icon {
@@ -144,6 +181,7 @@ ul {
 
   margin-top: 5px;
   padding: 4px;
+  //margin: auto;//yo friendrequest ma mileko cha auto halda
   border-radius: 10000px;
 
   &:hover {
@@ -152,11 +190,318 @@ ul {
 
   .profile-image {
     margin-right: 10px;
+    object-fit: cover;
   }
 }
 
 .icon-description:hover {
   background-color: #ececec;
+}
+
+//NAVBAR CSS FOR TABLETS
+
+.d-flex {
+  display: flex;
+}
+
+.jc-sb {
+  justify-content: space-between;
+}
+
+.ai-c {
+  align-items: center;
+}
+
+.li-icon-tablet {
+  width: 25px;
+}
+
+.search-field {
+  outline: none;
+  border: none;
+  background-color: var(--search-background-color);
+  margin-left: 0.5em;
+
+  &:focus {
+    outline: none;
+    &::placeholder {
+      color: transparent;
+    }
+  }
+}
+
+.navbar-tablet {
+  display: none;
+
+  //new css content to make fixed navbar
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  background-color: white;
+  box-shadow: 0px 0px 3px #cfc8c8;
+
+  .logo {
+    width: 40px;
+  }
+
+  .search-icon {
+    width: 18px;
+  }
+
+  .search-field {
+    width: 200px;
+  }
+
+  .links {
+    padding: 0;
+  }
+
+  .links a {
+    display: flex;
+    padding: 0.2em 0.5em;
+
+    align-items: center;
+    height: 100%;
+    text-decoration: none;
+    color: var(--links-color);
+    position: relative;
+
+    &:hover {
+      background-color: var(--search-background-color);
+    }
+
+    .message-badge,
+    .notification-badge,
+    .friend-request-badge {
+      position: absolute;
+      top: 1px;
+      left: 20px;
+      color: white;
+      background-color: rgb(248, 41, 41);
+      padding: 1px 5px;
+      font-size: 12px;
+      border-radius: 10000px;
+    }
+
+    img {
+      height: 25px;
+      width: 25px;
+      margin-right: 0.4em;
+    }
+  }
+
+  .search-icon-container {
+    background-color: var(--search-background-color);
+    height: 35px;
+
+    padding: 0.2em 0.8em;
+    border-radius: 10000px;
+    margin-left: 0.5em;
+  }
+
+  .navbar-top {
+    height: 45px;
+    box-shadow: 0px 0px 1px #cfc8c8;
+
+    .navbar-top-left {
+      padding-left: 1em;
+    }
+
+    .navbar-top-right {
+      padding-right: 1em;
+      .profile-img {
+        width: 30px;
+        height: 30px;
+        border-radius: 10000px;
+        object-fit: cover;
+      }
+
+      .profile-link {
+        border-radius: 1000px;
+        padding: 0;
+        height: auto;
+        padding-left: 0.2em;
+        padding-right: 0.2em;
+        margin-left: 0.4em;
+        padding-top: 2px;
+        padding-bottom: 2px;
+      }
+
+      .logout-tablet {
+        margin-left: 0.5em;
+        margin-bottom: 0.5em;
+        padding: 0.4em 0.5em 0.3em 0.5em;
+        color: white;
+        background-color: hsl(0, 60%, 50%);
+        border-color: hsl(0, 60%, 30%);
+        border-radius: 5px;
+        color: white;
+        align-self: flex-start;
+        margin-top: 8px;
+        &:hover,
+        &:focus {
+          background-color: hsl(0, 60%, 40%);
+          box-shadow: 0 0 5px 0 hsl(0, 60%, 30%);
+        }
+      }
+    }
+  }
+
+  //CSS for bottom navbar in tablet
+
+  .navbar-bottom {
+    display: flex;
+    justify-content: space-between;
+    height: 45px;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
+
+//NAVIGATION CSS FOR MOBILE
+.navbar-mobile {
+  background-color: white;
+  box-shadow: 0px 0px 3px #cfc8c8;
+  //new css content to make fixed navbar
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  .mobile-logout {
+    margin-left: auto 0;
+
+    padding: 0.3em 0.4em 0.3em 0.4em;
+    color: white;
+    background-color: hsl(0, 60%, 50%);
+    border-color: hsl(0, 60%, 30%);
+    border-radius: 5px;
+    color: white;
+    align-self: flex-start;
+    margin-top: 8px;
+    &:hover,
+    &:focus {
+      background-color: hsl(0, 60%, 40%);
+      box-shadow: 0 0 5px 0 hsl(0, 60%, 30%);
+    }
+  }
+
+  button {
+    text-align: center;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  img {
+    width: 25px;
+    height: 25px;
+  }
+  .profile-img {
+    border-radius: 1000px;
+    height: 30px;
+    width: 30px;
+    object-fit: cover;
+  }
+
+  .mobile-search-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .logo {
+    height: 35px;
+    width: 35px;
+  }
+  .back-icon {
+    width: 20px;
+  }
+
+  .mobile-search-div {
+    background-color: var(--search-background-color);
+  }
+
+  .navbar-mobile-top {
+    // display: flex;
+    // justify-content: space-between;
+    // padding-left: 0.5em;
+    // padding-right: 0.5em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    box-shadow: 0px 0px 1px #cfc8c8;
+  }
+
+  .mobile-top-left {
+    display: flex;
+    align-items: center;
+    padding-left: 1em;
+
+    .mobile-search-div {
+      border-radius: 10000px;
+      display: flex;
+      align-items: center;
+      margin-left: 1em;
+      padding: 5px 8px;
+    }
+  }
+
+  .mobile-top-right {
+    // display: flex;
+    // align-items: center;
+    // justify-content: space-around;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+  }
+
+  .navbar-mobile-bottom {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 40px;
+    gap: 15px;
+
+    a {
+      position: relative;
+      .badge {
+        position: absolute;
+        top: -5px;
+        left: 18px;
+        color: white;
+        background-color: rgb(248, 41, 41);
+        padding: 1px 5px;
+        font-size: 12px;
+        border-radius: 10000px;
+      }
+    }
+  }
+
+  .grid-div {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    //padding-top: 10px;
+    border-radius: 3px;
+    padding-top: 5px;
+    &:hover {
+      background-color: var(--search-background-color);
+    }
+  }
+}
+
+.button {
+  padding: 0.5em 1.2em;
+  border-radius: 0.2em;
+  border: none;
+  font-size: 16px;
+  font-weight: 400;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 //navbar css ends here
@@ -168,6 +513,7 @@ ul {
 }
 
 .edit-profile-container {
+  padding-top: 3em;
   width: 70%;
   height: 90vh;
   background-color: white;

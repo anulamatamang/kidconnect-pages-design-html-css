@@ -7,34 +7,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Friend Request</title>
     <link rel="stylesheet" href="css/friendrequest.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" ></script>
 </head>
 
 <body>
-    <div class="navbar">
+    <div class="navbar-desktop">
         <div class="container">
             <div class="logoAndSearch">
                 <a href="#">
                     <img class="logo" src="./images/kidconnect_logo_mobile.svg" alt="kidconnect logo">
                 </a>
-
+    
                 <div class="search">
                     <img src="./images/search_icon.svg" alt="">
                     <input type="text" placeholder="Search friends in KidConnect">
                 </div>
             </div>
-
+    
             <ul class="left-nav">
                 <li class="icon-description">
-                    <a class="li-a" href="./home.html">
-                    
+                    <a class="li-a" href="#">
+    
                         <img class="icon home-icon" src="./images/home_icon.svg" alt="home icon">
                         Home
                     </a>
                 </li>
                 <li class="icon-description">
-                    <a class="li-a" href="#">
-                    
+                    <a class="li-a" href="./friendrequest.html">
+    
                         <img class="icon" src="./images/friend_request_icon.svg" alt="">
+                        <span class="friend-request-badge">3</span>
                         Friend Request
                     </a>
                 </li>
@@ -43,29 +45,186 @@
                     Groups
                 </li>
             </ul>
-
+    
             <ul class="right-nav">
+                <li class="icon-description">
+                    <a href="#" class="li-a">
+    
+                        <img class="icon" src="./images/message_icon.svg" alt="">
+                        <span class="message-badge">5</span>
+                        Messages
+                    </a>
+                </li>
+                <li class="icon-description">
+                    <a href="#" class="li-a">
+    
+                        <img class="icon" src="./images/notification_icon.svg" alt="">
+                        <span class="notification-badge">3</span>
+                        Notifications
+                    </a>
+                </li>
                 <li class="profile-image-name">
-                <a class="li-a" href="./profile.html">
-                    <img class="profile-image" src="./images/shutterstock_648907024.jpg" alt="home icon">
-                    Anu
-                </a>
-                </li>
-                <li class="icon-description">
-                    <img class="icon" src="./images/message_icon.svg" alt="">
-                    Messages
-                </li>
-                <li class="icon-description">
-                    <img class="icon" src="./images/notification_icon.svg" alt="">
-                    Notifications
+                    <a class="li-a" href="./profile.html">
+                        <img class="profile-image" src="./images/shutterstock_648907024.jpg" alt="home icon">
+                        Anu
+                    </a>
                 </li>
             </ul>
-
-
+    
+    
             <button class="btn-danger">Logout</button>
-
+    
         </div>
     </div>
+
+    <div class="navbar-tablet">
+        <div class="navbar-top d-flex jc-sb ai-c">
+            <div class="navbar-top-left d-flex ai-c">
+                <img src="./images/kidconnect_logo_mobile.svg" alt="kidconnect logo" class="logo">
+                <div class="search-icon-container d-flex ai-c">
+                    <img src="./images/search_icon.svg" alt="search icon" class="search-icon">
+                    <input type="text" class="search-field" placeholder="Search friends in KidConnect">
+                </div>
+            </div>
+            <div class="navbar-top-right">
+                <ul>
+                    <li class="links">
+                        <a href="#">
+                            <img src="./images/home_icon.svg" alt="home icon" class="li-icon-tablet">
+                            Home
+                        </a>
+                    </li>
+                    <li class="links ">
+                        <a href="#" class="profile-link">
+                            <img src="./images/shutterstock_648907024.jpg" alt="profile image" class="profile-img">
+                            Anu
+                        </a>
+                    </li>
+                    <button class="logout-tablet">
+                        Logout
+                    </button>
+                </ul>
+    
+            </div>
+        </div>
+    
+        <div class="navbar-bottom">
+    
+            <ul class="navbar-bottom-left-ul">
+                <li class="links">
+                    <a href="#">
+                        <img src="./images/friend_request_icon.svg" alt="friend request icon" class="li-icon-tablet">
+                        <span class="friend-request-badge">12</span>
+                        Friend Request
+                    </a>
+                </li>
+                <li class="links">
+                    <a href="#">
+                        <img src="./images/group_icon.svg" alt="group icon" class="li-icon-tablet">
+                        Groups
+                    </a>
+                </li>
+    
+            </ul>
+            <ul class="navbar-bottom-right-ul">
+                <li class="links">
+                    <a href="#">
+                        <img src="./images/message_icon.svg" alt="message icon" class="li-icon-tablet">
+                        <span class="message-badge">5</span>
+                        Messages
+                    </a>
+                </li>
+                <li class="links">
+                    <a href="#">
+                        <img src="./images/notification_icon.svg" alt="notification icon" class="li-icon-tablet">
+                        <span class="notification-badge">10</span>
+                        Notifications
+                    </a>
+                </li>
+    
+            </ul>
+    
+    
+        </div>
+    
+    </div>
+
+    <div class="navbar-mobile hide">
+        <div class="navbar-mobile-top">
+            <div class="mobile-top-left">
+                <a href="#"><img class="logo" src="./images/kidconnect_logo_mobile.svg" alt="kidconnect logo"></a>
+                <div class="mobile-search-div">
+                    <img src="./images/search_icon.svg" alt="search icon" class="mobile-search-icon">
+                    <!-- <img src="./images/back_icon_ios.svg" alt="back icon" class="back-icon "> -->
+                    <!-- <input type="text" class="mobile-search-field " class="mobile-search-field"> -->
+                </div>
+    
+            </div>
+            <div class="mobile-top-right">
+                <div class="grid-div">
+    
+                    <a href="#">
+                        <img src="./images/home_icon.svg" alt="home icon">
+                    </a>
+                </div>
+    
+                <div class="grid-div">
+    
+                    <a href="#">
+                        <img src="./images/shutterstock_648907024.jpg" alt="profile image" class="profile-img">
+                    </a>
+                </div>
+    
+                <div class="grid-div ">
+    
+                    <button class="mobile-logout">Logout</button>
+                </div>
+    
+            </div>
+        </div>
+    
+        <div class="navbar-mobile-bottom">
+    
+            <div class="grid-div">
+    
+                <a href="#">
+                    <img src="./images/friend_request_icon.svg" alt="friend request icon">
+                    <span class="badge">12</span>
+                </a>
+            </div>
+    
+            <div class="grid-div">
+    
+                <a href="#">
+                    <img src="./images/group_icon.svg" alt="group icon">
+                </a>
+            </div>
+    
+            <div class="grid-div">
+    
+                <a href="#">
+                    <img src="./images/message_icon.svg" alt="message icon">
+                    <span class="badge">12</span>
+                </a>
+            </div>
+    
+            <div class="grid-div">
+    
+                <a href="#">
+                    <img src="./images/notification_icon.svg" alt="notification icon">
+                    <span class="badge">12</span>
+                </a>
+            </div>
+    
+    
+    
+    
+    
+    
+        </div>
+    
+    </div>
+
 
     <section class="friendrequest-container">
 
@@ -73,6 +232,9 @@
             <div class="container">
                 <h3>Friends</h3>
                 <p>3 Friend Requests</p>
+                <p class="profile-preview-p-small-screen">
+                    Select people's name to preview their profile.
+                </p>
                  <div class="request_container">
 
                      <ul id = "requests" class="requests">
@@ -238,10 +400,13 @@
 
             </p>
 
-            <div class="profile-preview-container ">
+            <!-- <div class="profile-preview-container  "> -->
 
-                <div class="profile-container hide">
+                <div class="profile-container  hide">
+                    <span class="back-btn-container hide">
 
+                        <img src="./images/back_icon.svg" alt="back icon" id="back-btn-profile-container">
+                    </span>
                     <div class="profile-header">
                         <img src="./images/ansari.jpg" alt="photo of request sender">
 
@@ -376,7 +541,7 @@
 
                 </div>
                 
-            </div>
+            <!-- </div> -->
 
 
         </div>
@@ -438,6 +603,66 @@
             aboutLine.classList.add("divider-line-li");
         })
 
+        if (window.innerWidth < 501 ) {
+
+            const profilePreview = document.getElementsByClassName("profile-preview")[0];
+
+            profilePreview.classList.add("hide");
+
+            const friendRequestList = document.getElementsByClassName("friendrequest-list")[0];
+
+            friendRequestList.classList.add("w-100");
+
+        }
+
+       function resize() {
+
+            var w = window.innerWidth;
+            const profilePreview = document.getElementsByClassName("profile-preview")[0];
+
+           profilePreview.classList.add("hide");
+
+           const friendRequestList = document.getElementsByClassName("friendrequest-list")[0];
+           const backBtnProfileContainer = document.getElementsByClassName("back-btn-container")[0];
+        
+           if (w < 501) {
+
+         
+
+              // friendRequestList.classList.add("w-100");
+
+              friendRequestList.style.width = w + "px"; 
+
+               example.addEventListener('click', () => {
+                  // p.classList.add("hide");
+                    friendRequestList.classList.add("hide")
+                  profilePreview.classList.remove("hide")
+
+                   profileContainer.classList.remove("hide");
+                   backBtnProfileContainer.classList.remove("hide");
+
+
+               })
+
+               backBtnProfileContainer.addEventListener('click', () => {
+                   profilePreview.classList.add("hide");
+                   friendRequestList.classList.remove("hide");
+               })
+
+
+
+
+           }else {
+                friendRequestList.style.width =  "350px";
+                profilePreview.classList.remove("hide");
+                backBtnProfileContainer.classList.add("hide");
+                friendRequestList.classList.remove("hide");
+           }
+
+
+       }
+
+       window.onresize = resize;
 
 
     </script>
