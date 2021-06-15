@@ -230,10 +230,10 @@
 
             <div class="profile-header">
 
-                <div class="profile-image-container">
+                <!-- <div class="profile-image-container"> -->
 
                     <img class="profile-image" src="./images/shutterstock_648907024.jpg" alt="">
-                </div>
+                <!-- </div> -->
 
                 <div class="header-info">
                     <div class="header-info-upper">
@@ -300,22 +300,22 @@
                 <hr class="container-divider-line">
                 <ul class="posts-and-friends-ul">
                     <li class="profile-nav">
-                          <div class="li-div">
+                          <div class="li-div" id="postsTab">
                               <hr class="bold-line">
-                              <h3>Posts</h3>
+                              <h3 >Posts</h3>
                             </div>
-                        </li>
-                        <li class="profile-nav">
-                            <div class="li-div">
-                                <hr class="bold-line">
-                                <h3>Friends</h3>
+                    </li>
+                    <li class="profile-nav">
+                            <div class="li-div" id="friendsTab">
+                                <hr class="invisible-bold-line">
+                                <h3 >Friends</h3>
 
                            
                        </div> 
                     </li>
                 </ul>
 
-                <div class="post-container hide">
+                <div class="post-container">
                     <div class="post">
                         <div class="post-header">
                             <img src="./images/shutterstock_648907024.jpg" alt="">
@@ -408,7 +408,7 @@
                     </div>
                 </div>
 
-                <div class="friends-container">
+                <div class="friends-container hide">
 
                     <div class="friends-container-header">
                         <div class="friends-header-left">
@@ -422,7 +422,7 @@
                                 <input type="text" placeholder="Search in Friends">
                             </div>
                             
-                            <h3 class="friend-request-text">Friend Request</h3>
+                            <!-- <h3 class="friend-request-text">Friend Request</h3> -->
                         </div>
                     </div>
 
@@ -532,6 +532,31 @@
 
     </div>
 
+    <script>
+        const postsTab = document.getElementById("postsTab");
+        const friendsTab = document.getElementById("friendsTab");
+        const postContainer = document.getElementsByClassName("post-container")[0];
+        const friendsContainer = document.getElementsByClassName("friends-container")[0];
+
+        console.log(postsTab);
+        console.log(friendsTab);
+
+        postsTab.addEventListener('click', ()=> {
+            postContainer.classList.remove("hide");
+            friendsContainer.classList.add("hide");
+         
+        
+            
+        })
+        
+        friendsTab.addEventListener('click', ()=> {
+            postContainer.classList.add("hide");
+            friendsContainer.classList.remove("hide");
+         
+        })
+
+
+    </script>
 
 
 </body>

@@ -528,6 +528,13 @@ ul {
   background-color: black;
 }
 
+.invisible-bold-line {
+  width: 100%;
+  height: 2px;
+  border-width: 0;
+  background-color: #fafafa;
+}
+
 .primary-hr {
   width: 100%;
 
@@ -564,15 +571,18 @@ ul {
       margin-bottom: 1.5em;
 
       .profile-image-container {
-        min-height: 8em;
-        min-width: 10em;
-        height: 10em;
-        width: 10em;
+        //min-height: 8em;
+        // min-width: 10em;
+
+        height: 160px;
+        width: 160px;
       }
 
       .profile-image {
-        height: 100%;
-        width: 100%;
+        // height: 100%;
+        // width: 100%;
+        height: 160px;
+        width: 160px;
 
         object-fit: cover;
         border-radius: 10000px;
@@ -685,6 +695,12 @@ ul {
           margin-right: 1em;
         }
         margin-bottom: 1em;
+      }
+
+      .li-div {
+        &:hover {
+          cursor: pointer;
+        }
       }
 
       .li-div h3 {
@@ -981,10 +997,461 @@ ul {
 
   .profile-body {
     padding-top: 90px;
+
+    .profile-container {
+      width: 70%;
+
+      //PROFILE_HEADER
+      .profile-header {
+        padding-top: 1.8em;
+        padding-left: 5em;
+
+        .profile-image {
+          height: 145px;
+          width: 145px;
+        }
+
+        .header-info {
+          margin-left: 3.5em;
+          margin-top: 1.5em;
+          .header-info-upper {
+            .name {
+              font-size: 18px;
+            }
+
+            .edit-profile-btn {
+              font-weight: 300;
+            }
+
+            .settings-icon {
+              width: 28px;
+            }
+          }
+
+          .header-info-lower {
+            margin-top: 2em;
+            span {
+              font-size: 15px;
+            }
+          }
+        }
+      }
+
+      //ABOUT_CONTAINER
+      .about-container {
+        .title-and-hr {
+          margin-left: 25%;
+
+          .about-span {
+            font-size: 20px;
+          }
+        }
+
+        .about-description {
+          padding-left: 12%;
+
+          .info-and-hobbies {
+            .icon-and-description {
+              img {
+                height: 23px;
+                width: 23px;
+              }
+
+              .description {
+                font-size: 16px;
+              }
+            }
+          }
+        }
+      }
+
+      //POSTS_AND_FRIENDS_CONTAINER
+      .posts-and-friends-container {
+        //POST_AND_FRIENDS_UL
+        .posts-and-friends-ul {
+          margin-left: 25%;
+
+          .profile-nav {
+            .li-div {
+              h3 {
+                font-size: 20px;
+              }
+            }
+          }
+        }
+
+        //POST_CONTAINER
+        .post-container {
+          width: 580px;
+
+          .post {
+            .post-header {
+              img {
+                height: 40px;
+                width: 40px;
+              }
+              .name {
+                font-size: 15px;
+              }
+              .span-desc {
+                font-size: 14px;
+              }
+            }
+            .post-bottom {
+              .likes-icon-and-info {
+                img {
+                  width: 25px;
+                  height: 25px;
+                }
+                .like-info {
+                  font-size: 14px;
+                }
+              }
+
+              .icons-and-actions {
+                .action {
+                  .action-icon {
+                    height: 23px;
+                    width: 23px;
+                  }
+                  .description {
+                    font-size: 14px;
+                  }
+                }
+              }
+
+              .comment-container {
+                .comment-input-container {
+                  img {
+                    height: 40px;
+                    width: 40px;
+                  }
+
+                  input {
+                    font-size: 14px;
+                  }
+
+                  .action-post {
+                    font-size: 14px;
+                    padding-right: 15px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
 
-//MEDIA QUERY FIR MOBILE
+//INTERMEDIATE MEDIA QUERIES
+@media (max-width: 1024px) {
+  .profile-body {
+    // padding-top: 82px;
+
+    //PROFILE_CONTAINER
+    .profile-container {
+      width: 80%;
+
+      //PROFILE_HEADER
+      .profile-header {
+        padding-top: 1.8em;
+        padding-left: 5em;
+
+        .profile-image {
+          height: 140px;
+          width: 140px;
+        }
+
+        .header-info {
+          margin-left: 3.5em;
+          margin-top: 1.5em;
+          .header-info-upper {
+            .name {
+              font-size: 18px;
+            }
+
+            .edit-profile-btn {
+              font-weight: 300;
+            }
+
+            .settings-icon {
+              width: 25px;
+            }
+          }
+
+          .header-info-lower {
+            margin-top: 1.8em;
+            span {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+
+      //ABOUT_CONTAINER
+      .about-container {
+        .title-and-hr {
+          margin-left: 20%;
+
+          .about-span {
+            font-size: 18px;
+          }
+        }
+
+        .about-description {
+          padding-left: 10%;
+
+          .info-and-hobbies {
+            .icon-and-description {
+              img {
+                height: 20px;
+                width: 20px;
+              }
+
+              .description {
+                font-size: 15px;
+              }
+            }
+          }
+        }
+      }
+
+      //POSTS_AND_FRIENDS_CONTAINER
+      .posts-and-friends-container {
+        //POST_AND_FRIENDS_UL
+        .posts-and-friends-ul {
+          margin-left: 20%;
+
+          .profile-nav {
+            .li-div {
+              h3 {
+                font-size: 18px;
+              }
+            }
+          }
+        }
+
+        //POST_CONTAINER
+        .post-container {
+          width: 570px;
+
+          .post {
+            .post-header {
+              img {
+                height: 40px;
+                width: 40px;
+              }
+              .name {
+                font-size: 15px;
+              }
+              .span-desc {
+                font-size: 14px;
+              }
+            }
+            .post-bottom {
+              .likes-icon-and-info {
+                img {
+                  width: 25px;
+                  height: 25px;
+                }
+                .like-info {
+                  font-size: 14px;
+                }
+              }
+
+              .icons-and-actions {
+                .action {
+                  .action-icon {
+                    height: 23px;
+                    width: 23px;
+                  }
+                  .description {
+                    font-size: 14px;
+                  }
+                }
+              }
+
+              .comment-container {
+                .comment-input-container {
+                  img {
+                    height: 40px;
+                    width: 40px;
+                  }
+
+                  input {
+                    font-size: 14px;
+                  }
+
+                  .action-post {
+                    font-size: 14px;
+                    padding-right: 15px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//INTERMEDIATE MEDIA QUERIES
+@media (max-width: 800px) {
+  .profile-body {
+    // padding-top: 82px;
+
+    //PROFILE_CONTAINER
+    .profile-container {
+      width: 100%;
+
+      //PROFILE_HEADER
+      .profile-header {
+        padding-top: 1.8em;
+        padding-left: 5em;
+
+        .profile-image {
+          height: 140px;
+          width: 140px;
+        }
+
+        .header-info {
+          margin-left: 3.5em;
+          margin-top: 1.5em;
+          .header-info-upper {
+            .name {
+              font-size: 18px;
+            }
+
+            .edit-profile-btn {
+              font-weight: 300;
+            }
+
+            .settings-icon {
+              width: 25px;
+            }
+          }
+
+          .header-info-lower {
+            margin-top: 1.8em;
+            span {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+
+      //ABOUT_CONTAINER
+      .about-container {
+        .title-and-hr {
+          margin-left: 20%;
+
+          .about-span {
+            font-size: 18px;
+          }
+        }
+
+        .about-description {
+          padding-left: 10%;
+
+          .info-and-hobbies {
+            .icon-and-description {
+              img {
+                height: 20px;
+                width: 20px;
+              }
+
+              .description {
+                font-size: 15px;
+              }
+            }
+          }
+        }
+      }
+
+      //POSTS_AND_FRIENDS_CONTAINER
+      .posts-and-friends-container {
+        //POST_AND_FRIENDS_UL
+        .posts-and-friends-ul {
+          margin-left: 20%;
+
+          .profile-nav {
+            .li-div {
+              h3 {
+                font-size: 18px;
+              }
+            }
+          }
+        }
+
+        //POST_CONTAINER
+        .post-container {
+          width: 570px;
+
+          .post {
+            .post-header {
+              img {
+                height: 40px;
+                width: 40px;
+              }
+              .name {
+                font-size: 15px;
+              }
+              .span-desc {
+                font-size: 14px;
+              }
+            }
+            .post-bottom {
+              .likes-icon-and-info {
+                img {
+                  width: 25px;
+                  height: 25px;
+                }
+                .like-info {
+                  font-size: 14px;
+                }
+              }
+
+              .icons-and-actions {
+                .action {
+                  .action-icon {
+                    height: 23px;
+                    width: 23px;
+                  }
+                  .description {
+                    font-size: 14px;
+                  }
+                }
+              }
+
+              .comment-container {
+                .comment-input-container {
+                  img {
+                    height: 40px;
+                    width: 40px;
+                  }
+
+                  input {
+                    font-size: 14px;
+                  }
+
+                  .action-post {
+                    font-size: 14px;
+                    padding-right: 15px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//MEDIA QUERY FOR MOBILE
 
 @media (max-width: 600px) {
   .navbar-desktop {
@@ -1001,5 +1468,151 @@ ul {
 
   .profile-body {
     padding-top: 82px;
+
+    //PROFILE_CONTAINER
+    .profile-container {
+      width: 100%;
+
+      //PROFILE_HEADER
+      .profile-header {
+        padding-top: 1.5em;
+        padding-left: 2em;
+
+        .profile-image {
+          height: 140px;
+          width: 140px;
+        }
+
+        .header-info {
+          margin-left: 3.5em;
+          margin-top: 1.5em;
+          .header-info-upper {
+            .name {
+              font-size: 18px;
+            }
+
+            .edit-profile-btn {
+              font-weight: 300;
+            }
+
+            .settings-icon {
+              width: 25px;
+            }
+          }
+
+          .header-info-lower {
+            margin-top: 1.8em;
+            span {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+
+      //ABOUT_CONTAINER
+      .about-container {
+        .title-and-hr {
+          margin-left: 20%;
+
+          .about-span {
+            font-size: 18px;
+          }
+        }
+
+        .about-description {
+          padding-left: 10%;
+
+          .info-and-hobbies {
+            .icon-and-description {
+              img {
+                height: 20px;
+                width: 20px;
+              }
+
+              .description {
+                font-size: 15px;
+              }
+            }
+          }
+        }
+      }
+
+      //POSTS_AND_FRIENDS_CONTAINER
+      .posts-and-friends-container {
+        //POST_AND_FRIENDS_UL
+        .posts-and-friends-ul {
+          margin-left: 20%;
+
+          .profile-nav {
+            .li-div {
+              h3 {
+                font-size: 18px;
+              }
+            }
+          }
+        }
+
+        //POST_CONTAINER
+        .post-container {
+          width: 98%;
+
+          .post {
+            .post-header {
+              img {
+                height: 40px;
+                width: 40px;
+              }
+              .name {
+                font-size: 15px;
+              }
+              .span-desc {
+                font-size: 14px;
+              }
+            }
+            .post-bottom {
+              .likes-icon-and-info {
+                img {
+                  width: 25px;
+                  height: 25px;
+                }
+                .like-info {
+                  font-size: 14px;
+                }
+              }
+
+              .icons-and-actions {
+                .action {
+                  .action-icon {
+                    height: 23px;
+                    width: 23px;
+                  }
+                  .description {
+                    font-size: 14px;
+                  }
+                }
+              }
+
+              .comment-container {
+                .comment-input-container {
+                  img {
+                    height: 40px;
+                    width: 40px;
+                  }
+
+                  input {
+                    font-size: 14px;
+                  }
+
+                  .action-post {
+                    font-size: 14px;
+                    padding-right: 15px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }

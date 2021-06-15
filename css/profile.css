@@ -590,6 +590,13 @@ ul .profile-image {
   background-color: black;
 }
 
+.invisible-bold-line {
+  width: 100%;
+  height: 2px;
+  border-width: 0;
+  background-color: #fafafa;
+}
+
 .primary-hr {
   width: 100%;
   height: 2px;
@@ -630,15 +637,13 @@ ul .profile-image {
 }
 
 .profile-body .profile-container .profile-header .profile-image-container {
-  min-height: 8em;
-  min-width: 10em;
-  height: 10em;
-  width: 10em;
+  height: 160px;
+  width: 160px;
 }
 
 .profile-body .profile-container .profile-header .profile-image {
-  height: 100%;
-  width: 100%;
+  height: 160px;
+  width: 160px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 10000px;
@@ -754,6 +759,10 @@ ul .profile-image {
 
 .profile-body .profile-container .posts-and-friends-container .posts-and-friends-ul .profile-nav {
   margin-right: 1em;
+}
+
+.profile-body .profile-container .posts-and-friends-container .li-div:hover {
+  cursor: pointer;
 }
 
 .profile-body .profile-container .posts-and-friends-container .li-div h3 {
@@ -1112,6 +1121,282 @@ ul .profile-image {
   .profile-body {
     padding-top: 90px;
   }
+  .profile-body .profile-container {
+    width: 70%;
+  }
+  .profile-body .profile-container .profile-header {
+    padding-top: 1.8em;
+    padding-left: 5em;
+  }
+  .profile-body .profile-container .profile-header .profile-image {
+    height: 145px;
+    width: 145px;
+  }
+  .profile-body .profile-container .profile-header .header-info {
+    margin-left: 3.5em;
+    margin-top: 1.5em;
+  }
+  .profile-body .profile-container .profile-header .header-info .header-info-upper .name {
+    font-size: 18px;
+  }
+  .profile-body .profile-container .profile-header .header-info .header-info-upper .edit-profile-btn {
+    font-weight: 300;
+  }
+  .profile-body .profile-container .profile-header .header-info .header-info-upper .settings-icon {
+    width: 28px;
+  }
+  .profile-body .profile-container .profile-header .header-info .header-info-lower {
+    margin-top: 2em;
+  }
+  .profile-body .profile-container .profile-header .header-info .header-info-lower span {
+    font-size: 15px;
+  }
+  .profile-body .profile-container .about-container .title-and-hr {
+    margin-left: 25%;
+  }
+  .profile-body .profile-container .about-container .title-and-hr .about-span {
+    font-size: 20px;
+  }
+  .profile-body .profile-container .about-container .about-description {
+    padding-left: 12%;
+  }
+  .profile-body .profile-container .about-container .about-description .info-and-hobbies .icon-and-description img {
+    height: 23px;
+    width: 23px;
+  }
+  .profile-body .profile-container .about-container .about-description .info-and-hobbies .icon-and-description .description {
+    font-size: 16px;
+  }
+  .profile-body .profile-container .posts-and-friends-container .posts-and-friends-ul {
+    margin-left: 25%;
+  }
+  .profile-body .profile-container .posts-and-friends-container .posts-and-friends-ul .profile-nav .li-div h3 {
+    font-size: 20px;
+  }
+  .profile-body .profile-container .posts-and-friends-container .post-container {
+    width: 580px;
+  }
+  .profile-body .profile-container .posts-and-friends-container .post-container .post .post-header img {
+    height: 40px;
+    width: 40px;
+  }
+  .profile-body .profile-container .posts-and-friends-container .post-container .post .post-header .name {
+    font-size: 15px;
+  }
+  .profile-body .profile-container .posts-and-friends-container .post-container .post .post-header .span-desc {
+    font-size: 14px;
+  }
+  .profile-body .profile-container .posts-and-friends-container .post-container .post .post-bottom .likes-icon-and-info img {
+    width: 25px;
+    height: 25px;
+  }
+  .profile-body .profile-container .posts-and-friends-container .post-container .post .post-bottom .likes-icon-and-info .like-info {
+    font-size: 14px;
+  }
+  .profile-body .profile-container .posts-and-friends-container .post-container .post .post-bottom .icons-and-actions .action .action-icon {
+    height: 23px;
+    width: 23px;
+  }
+  .profile-body .profile-container .posts-and-friends-container .post-container .post .post-bottom .icons-and-actions .action .description {
+    font-size: 14px;
+  }
+  .profile-body .profile-container .posts-and-friends-container .post-container .post .post-bottom .comment-container .comment-input-container img {
+    height: 40px;
+    width: 40px;
+  }
+  .profile-body .profile-container .posts-and-friends-container .post-container .post .post-bottom .comment-container .comment-input-container input {
+    font-size: 14px;
+  }
+  .profile-body .profile-container .posts-and-friends-container .post-container .post .post-bottom .comment-container .comment-input-container .action-post {
+    font-size: 14px;
+    padding-right: 15px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .profile-body .profile-container {
+    width: 80%;
+  }
+  .profile-body .profile-container .profile-header {
+    padding-top: 1.8em;
+    padding-left: 5em;
+  }
+  .profile-body .profile-container .profile-header .profile-image {
+    height: 140px;
+    width: 140px;
+  }
+  .profile-body .profile-container .profile-header .header-info {
+    margin-left: 3.5em;
+    margin-top: 1.5em;
+  }
+  .profile-body .profile-container .profile-header .header-info .header-info-upper .name {
+    font-size: 18px;
+  }
+  .profile-body .profile-container .profile-header .header-info .header-info-upper .edit-profile-btn {
+    font-weight: 300;
+  }
+  .profile-body .profile-container .profile-header .header-info .header-info-upper .settings-icon {
+    width: 25px;
+  }
+  .profile-body .profile-container .profile-header .header-info .header-info-lower {
+    margin-top: 1.8em;
+  }
+  .profile-body .profile-container .profile-header .header-info .header-info-lower span {
+    font-size: 14px;
+  }
+  .profile-body .profile-container .about-container .title-and-hr {
+    margin-left: 20%;
+  }
+  .profile-body .profile-container .about-container .title-and-hr .about-span {
+    font-size: 18px;
+  }
+  .profile-body .profile-container .about-container .about-description {
+    padding-left: 10%;
+  }
+  .profile-body .profile-container .about-container .about-description .info-and-hobbies .icon-and-description img {
+    height: 20px;
+    width: 20px;
+  }
+  .profile-body .profile-container .about-container .about-description .info-and-hobbies .icon-and-description .description {
+    font-size: 15px;
+  }
+  .profile-body .profile-container .posts-and-friends-container .posts-and-friends-ul {
+    margin-left: 20%;
+  }
+  .profile-body .profile-container .posts-and-friends-container .posts-and-friends-ul .profile-nav .li-div h3 {
+    font-size: 18px;
+  }
+  .profile-body .profile-container .posts-and-friends-container .post-container {
+    width: 570px;
+  }
+  .profile-body .profile-container .posts-and-friends-container .post-container .post .post-header img {
+    height: 40px;
+    width: 40px;
+  }
+  .profile-body .profile-container .posts-and-friends-container .post-container .post .post-header .name {
+    font-size: 15px;
+  }
+  .profile-body .profile-container .posts-and-friends-container .post-container .post .post-header .span-desc {
+    font-size: 14px;
+  }
+  .profile-body .profile-container .posts-and-friends-container .post-container .post .post-bottom .likes-icon-and-info img {
+    width: 25px;
+    height: 25px;
+  }
+  .profile-body .profile-container .posts-and-friends-container .post-container .post .post-bottom .likes-icon-and-info .like-info {
+    font-size: 14px;
+  }
+  .profile-body .profile-container .posts-and-friends-container .post-container .post .post-bottom .icons-and-actions .action .action-icon {
+    height: 23px;
+    width: 23px;
+  }
+  .profile-body .profile-container .posts-and-friends-container .post-container .post .post-bottom .icons-and-actions .action .description {
+    font-size: 14px;
+  }
+  .profile-body .profile-container .posts-and-friends-container .post-container .post .post-bottom .comment-container .comment-input-container img {
+    height: 40px;
+    width: 40px;
+  }
+  .profile-body .profile-container .posts-and-friends-container .post-container .post .post-bottom .comment-container .comment-input-container input {
+    font-size: 14px;
+  }
+  .profile-body .profile-container .posts-and-friends-container .post-container .post .post-bottom .comment-container .comment-input-container .action-post {
+    font-size: 14px;
+    padding-right: 15px;
+  }
+}
+
+@media (max-width: 800px) {
+  .profile-body .profile-container {
+    width: 100%;
+  }
+  .profile-body .profile-container .profile-header {
+    padding-top: 1.8em;
+    padding-left: 5em;
+  }
+  .profile-body .profile-container .profile-header .profile-image {
+    height: 140px;
+    width: 140px;
+  }
+  .profile-body .profile-container .profile-header .header-info {
+    margin-left: 3.5em;
+    margin-top: 1.5em;
+  }
+  .profile-body .profile-container .profile-header .header-info .header-info-upper .name {
+    font-size: 18px;
+  }
+  .profile-body .profile-container .profile-header .header-info .header-info-upper .edit-profile-btn {
+    font-weight: 300;
+  }
+  .profile-body .profile-container .profile-header .header-info .header-info-upper .settings-icon {
+    width: 25px;
+  }
+  .profile-body .profile-container .profile-header .header-info .header-info-lower {
+    margin-top: 1.8em;
+  }
+  .profile-body .profile-container .profile-header .header-info .header-info-lower span {
+    font-size: 14px;
+  }
+  .profile-body .profile-container .about-container .title-and-hr {
+    margin-left: 20%;
+  }
+  .profile-body .profile-container .about-container .title-and-hr .about-span {
+    font-size: 18px;
+  }
+  .profile-body .profile-container .about-container .about-description {
+    padding-left: 10%;
+  }
+  .profile-body .profile-container .about-container .about-description .info-and-hobbies .icon-and-description img {
+    height: 20px;
+    width: 20px;
+  }
+  .profile-body .profile-container .about-container .about-description .info-and-hobbies .icon-and-description .description {
+    font-size: 15px;
+  }
+  .profile-body .profile-container .posts-and-friends-container .posts-and-friends-ul {
+    margin-left: 20%;
+  }
+  .profile-body .profile-container .posts-and-friends-container .posts-and-friends-ul .profile-nav .li-div h3 {
+    font-size: 18px;
+  }
+  .profile-body .profile-container .posts-and-friends-container .post-container {
+    width: 570px;
+  }
+  .profile-body .profile-container .posts-and-friends-container .post-container .post .post-header img {
+    height: 40px;
+    width: 40px;
+  }
+  .profile-body .profile-container .posts-and-friends-container .post-container .post .post-header .name {
+    font-size: 15px;
+  }
+  .profile-body .profile-container .posts-and-friends-container .post-container .post .post-header .span-desc {
+    font-size: 14px;
+  }
+  .profile-body .profile-container .posts-and-friends-container .post-container .post .post-bottom .likes-icon-and-info img {
+    width: 25px;
+    height: 25px;
+  }
+  .profile-body .profile-container .posts-and-friends-container .post-container .post .post-bottom .likes-icon-and-info .like-info {
+    font-size: 14px;
+  }
+  .profile-body .profile-container .posts-and-friends-container .post-container .post .post-bottom .icons-and-actions .action .action-icon {
+    height: 23px;
+    width: 23px;
+  }
+  .profile-body .profile-container .posts-and-friends-container .post-container .post .post-bottom .icons-and-actions .action .description {
+    font-size: 14px;
+  }
+  .profile-body .profile-container .posts-and-friends-container .post-container .post .post-bottom .comment-container .comment-input-container img {
+    height: 40px;
+    width: 40px;
+  }
+  .profile-body .profile-container .posts-and-friends-container .post-container .post .post-bottom .comment-container .comment-input-container input {
+    font-size: 14px;
+  }
+  .profile-body .profile-container .posts-and-friends-container .post-container .post .post-bottom .comment-container .comment-input-container .action-post {
+    font-size: 14px;
+    padding-right: 15px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -1126,6 +1411,96 @@ ul .profile-image {
   }
   .profile-body {
     padding-top: 82px;
+  }
+  .profile-body .profile-container {
+    width: 100%;
+  }
+  .profile-body .profile-container .profile-header {
+    padding-top: 1.5em;
+    padding-left: 2em;
+  }
+  .profile-body .profile-container .profile-header .profile-image {
+    height: 140px;
+    width: 140px;
+  }
+  .profile-body .profile-container .profile-header .header-info {
+    margin-left: 3.5em;
+    margin-top: 1.5em;
+  }
+  .profile-body .profile-container .profile-header .header-info .header-info-upper .name {
+    font-size: 18px;
+  }
+  .profile-body .profile-container .profile-header .header-info .header-info-upper .edit-profile-btn {
+    font-weight: 300;
+  }
+  .profile-body .profile-container .profile-header .header-info .header-info-upper .settings-icon {
+    width: 25px;
+  }
+  .profile-body .profile-container .profile-header .header-info .header-info-lower {
+    margin-top: 1.8em;
+  }
+  .profile-body .profile-container .profile-header .header-info .header-info-lower span {
+    font-size: 14px;
+  }
+  .profile-body .profile-container .about-container .title-and-hr {
+    margin-left: 20%;
+  }
+  .profile-body .profile-container .about-container .title-and-hr .about-span {
+    font-size: 18px;
+  }
+  .profile-body .profile-container .about-container .about-description {
+    padding-left: 10%;
+  }
+  .profile-body .profile-container .about-container .about-description .info-and-hobbies .icon-and-description img {
+    height: 20px;
+    width: 20px;
+  }
+  .profile-body .profile-container .about-container .about-description .info-and-hobbies .icon-and-description .description {
+    font-size: 15px;
+  }
+  .profile-body .profile-container .posts-and-friends-container .posts-and-friends-ul {
+    margin-left: 20%;
+  }
+  .profile-body .profile-container .posts-and-friends-container .posts-and-friends-ul .profile-nav .li-div h3 {
+    font-size: 18px;
+  }
+  .profile-body .profile-container .posts-and-friends-container .post-container {
+    width: 98%;
+  }
+  .profile-body .profile-container .posts-and-friends-container .post-container .post .post-header img {
+    height: 40px;
+    width: 40px;
+  }
+  .profile-body .profile-container .posts-and-friends-container .post-container .post .post-header .name {
+    font-size: 15px;
+  }
+  .profile-body .profile-container .posts-and-friends-container .post-container .post .post-header .span-desc {
+    font-size: 14px;
+  }
+  .profile-body .profile-container .posts-and-friends-container .post-container .post .post-bottom .likes-icon-and-info img {
+    width: 25px;
+    height: 25px;
+  }
+  .profile-body .profile-container .posts-and-friends-container .post-container .post .post-bottom .likes-icon-and-info .like-info {
+    font-size: 14px;
+  }
+  .profile-body .profile-container .posts-and-friends-container .post-container .post .post-bottom .icons-and-actions .action .action-icon {
+    height: 23px;
+    width: 23px;
+  }
+  .profile-body .profile-container .posts-and-friends-container .post-container .post .post-bottom .icons-and-actions .action .description {
+    font-size: 14px;
+  }
+  .profile-body .profile-container .posts-and-friends-container .post-container .post .post-bottom .comment-container .comment-input-container img {
+    height: 40px;
+    width: 40px;
+  }
+  .profile-body .profile-container .posts-and-friends-container .post-container .post .post-bottom .comment-container .comment-input-container input {
+    font-size: 14px;
+  }
+  .profile-body .profile-container .posts-and-friends-container .post-container .post .post-bottom .comment-container .comment-input-container .action-post {
+    font-size: 14px;
+    padding-right: 15px;
   }
 }
 /*# sourceMappingURL=profile.css.map */
