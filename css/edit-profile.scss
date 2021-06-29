@@ -18,7 +18,7 @@ body {
   font-family: 'Poppins';
   box-sizing: border-box;
   height: 100vh;
-  overflow-y: hidden;
+  overflow-y: auto;
 }
 
 .hide {
@@ -504,7 +504,7 @@ ul {
   }
 }
 
-//navbar css ends here
+//NAVBAR CSS ENDS HERE
 
 //edit-profile-container
 
@@ -512,18 +512,29 @@ ul {
   border-left: 2px solid black;
 }
 
+.border-top {
+  display: none;
+}
+
+.edit-profile-body {
+  width: 100%;
+  margin-top: 60px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .edit-profile-container {
-  padding-top: 3em;
+  // padding-top: 3em;
   width: 70%;
   height: 90vh;
   background-color: white;
-  margin: 1.5em auto 0 auto;
+  margin: 0 auto;
 
   display: grid;
   grid-template-columns: 30% 70%;
 
   .edit-profile-and-change-password-menu-container {
-    height: 100%;
+    // height: 100%;
 
     min-width: fit-content;
 
@@ -544,8 +555,11 @@ ul {
     border-left: none;
 
     .edit-profile {
-      padding-left: 8em;
-      padding-top: 2.5em;
+      // padding-left: 10%;
+      // padding-top: 2.5em;
+      width: 80%;
+      margin: auto;
+      margin-top: 2.5em;
 
       .edit-profile-header {
         display: flex;
@@ -578,16 +592,20 @@ ul {
 
       form {
         margin-top: 2em;
+
         .help-info {
           height: auto;
           width: 100%;
           display: flex;
           justify-content: flex-end;
+
+          top: 20%;
           margin-bottom: 1em;
           p {
             width: 320px;
             font-size: 13px;
-            margin-right: 6.5em;
+            //margin-right: 6.5em;
+            margin-right: 6vw;
             color: #7b7a7a;
             font-weight: 500;
           }
@@ -597,6 +615,14 @@ ul {
           display: flex;
           align-items: flex-start;
           margin-bottom: 1em;
+
+          p {
+            width: 320px;
+            font-size: 13px;
+
+            color: #7b7a7a;
+            font-weight: 500;
+          }
 
           .label > label {
             color: #262626;
@@ -639,7 +665,7 @@ ul {
 
     .change-password {
       padding: 2.5em 0 8em 0;
-      padding-left: 8em;
+      padding-left: 10%;
 
       .change-password-header {
         display: flex;
@@ -703,5 +729,63 @@ ul {
         }
       }
     }
+  }
+}
+
+//MEDIA QUERY FOR TABLET
+
+@media (max-width: 1230px) {
+  .navbar-desktop {
+    display: none;
+  }
+
+  .navbar-tablet {
+    display: block;
+
+    ul {
+      font-size: 15px;
+    }
+  }
+
+  .edit-profile-body {
+    margin-top: 100px;
+
+    .edit-profile-container {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      min-width: 500px;
+
+      .edit-profile-and-change-password-menu-container {
+        display: flex;
+        justify-content: space-around;
+
+        .border-left {
+          //change the border left to border top for small screens, class name remains the same for simplicity
+          border: none;
+          border-top: 2px solid black;
+        }
+      }
+    }
+  }
+}
+
+//MEDIA QUERY FOR MOBILE
+
+@media (max-width: 600px) {
+  .navbar-desktop {
+    display: none;
+  }
+
+  .navbar-tablet {
+    display: none;
+  }
+
+  .navbar-mobile {
+    display: block;
+  }
+
+  .edit-profile-body {
+    margin-top: 90px;
   }
 }

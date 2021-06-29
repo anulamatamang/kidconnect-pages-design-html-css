@@ -18,7 +18,7 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   height: 100vh;
-  overflow-y: hidden;
+  overflow-y: auto;
 }
 
 .hide {
@@ -579,12 +579,22 @@ ul .profile-image {
   border-left: 2px solid black;
 }
 
+.border-top {
+  display: none;
+}
+
+.edit-profile-body {
+  width: 100%;
+  margin-top: 60px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .edit-profile-container {
-  padding-top: 3em;
   width: 70%;
   height: 90vh;
   background-color: white;
-  margin: 1.5em auto 0 auto;
+  margin: 0 auto;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 30% 70%;
@@ -592,7 +602,6 @@ ul .profile-image {
 }
 
 .edit-profile-container .edit-profile-and-change-password-menu-container {
-  height: 100%;
   min-width: -webkit-fit-content;
   min-width: -moz-fit-content;
   min-width: fit-content;
@@ -621,8 +630,9 @@ ul .profile-image {
 }
 
 .edit-profile-container .edit-profile-or-change-password-container .edit-profile {
-  padding-left: 8em;
-  padding-top: 2.5em;
+  width: 80%;
+  margin: auto;
+  margin-top: 2.5em;
 }
 
 .edit-profile-container .edit-profile-or-change-password-container .edit-profile .edit-profile-header {
@@ -671,13 +681,14 @@ ul .profile-image {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  top: 20%;
   margin-bottom: 1em;
 }
 
 .edit-profile-container .edit-profile-or-change-password-container .edit-profile form .help-info p {
   width: 320px;
   font-size: 13px;
-  margin-right: 6.5em;
+  margin-right: 6vw;
   color: #7b7a7a;
   font-weight: 500;
 }
@@ -690,6 +701,13 @@ ul .profile-image {
       -ms-flex-align: start;
           align-items: flex-start;
   margin-bottom: 1em;
+}
+
+.edit-profile-container .edit-profile-or-change-password-container .edit-profile form .row p {
+  width: 320px;
+  font-size: 13px;
+  color: #7b7a7a;
+  font-weight: 500;
 }
 
 .edit-profile-container .edit-profile-or-change-password-container .edit-profile form .row .label > label {
@@ -737,7 +755,7 @@ ul .profile-image {
 
 .edit-profile-container .edit-profile-or-change-password-container .change-password {
   padding: 2.5em 0 8em 0;
-  padding-left: 8em;
+  padding-left: 10%;
 }
 
 .edit-profile-container .edit-profile-or-change-password-container .change-password .change-password-header {
@@ -807,5 +825,57 @@ ul .profile-image {
 .edit-profile-container .edit-profile-or-change-password-container .change-password .change-password-form .change-password-btn:focus, .edit-profile-container .edit-profile-or-change-password-container .change-password .change-password-form .change-password-btn:hover {
   cursor: pointer;
   background-color: #00c6ce;
+}
+
+@media (max-width: 1230px) {
+  .navbar-desktop {
+    display: none;
+  }
+  .navbar-tablet {
+    display: block;
+  }
+  .navbar-tablet ul {
+    font-size: 15px;
+  }
+  .edit-profile-body {
+    margin-top: 100px;
+  }
+  .edit-profile-body .edit-profile-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 50%;
+    min-width: 500px;
+  }
+  .edit-profile-body .edit-profile-container .edit-profile-and-change-password-menu-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .edit-profile-body .edit-profile-container .edit-profile-and-change-password-menu-container .border-left {
+    border: none;
+    border-top: 2px solid black;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar-desktop {
+    display: none;
+  }
+  .navbar-tablet {
+    display: none;
+  }
+  .navbar-mobile {
+    display: block;
+  }
+  .edit-profile-body {
+    margin-top: 90px;
+  }
 }
 /*# sourceMappingURL=edit-profile.css.map */

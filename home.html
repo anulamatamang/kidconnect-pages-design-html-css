@@ -230,15 +230,61 @@
         <div class="homepage-container">
             <div class="create-post-container">
                 <div class="create-post-header">
-
                     <img src="./images/shutterstock_648907024.jpg" alt="profile image">
-                    <input type="text" placeholder="What's on your mind, Anu?">
+                    <input id="status-input" type="text" placeholder="What's on your mind, Anu?">
                 </div>
 
                 <hr class="divider-line">
+
                 <div class="create-post-bottom">
-                    <img src="./images/add_a_photo_icon.svg" alt="add a photo icon">
-                    <span>Photo</span>
+                    <label for="image-file-input">
+                        <img src="./images/add_a_photo_icon.svg" alt="add a photo icon">
+                    </label>
+                    <label for="image-file-input">
+                        <span>Photo</span>
+                    </label>
+                    <!--image file input-->
+                    <input type="file" id="image-file-input" accept="images/*">
+                </div>
+            </div>
+
+            <!-- Modal for "Create Post" -->
+            <div id="create-post-modal" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span></span><!--empty span for css simplicity-->
+                        <span class="modal-header-title">Create Post</span>
+                        <span class="close">&times;</span>
+                    </div>
+
+                    <hr class="modal-divider-line">
+
+                    <div class="modal-body">
+                        <div class="profile-image-and-name-modal">
+                            <img  class="profile-image-modal" src="./images/shutterstock_648907024.jpg" alt="">
+                            <span class="profile-name-modal">Anu Lama</span>
+                        </div>
+                        
+                        <textarea id="status-field-modal" placeholder="What's on your mind?" rows=4></textarea>
+
+                        <div class="image-preview-div">
+                            <img src="" alt="preview of selected image" id="image-preview">
+                            <span id="image-preview-close-btn">&times;</span>
+                        </div>
+
+                        <div class="modal-image-upload-label">
+                            <div class="flex-div">
+                                <label for="image-file-input">
+                                    <span class="image-upload-desc">Add to your post</span>
+                                </label>
+                                <label for="image-file-input">
+                                    <img class="modal-add-photo-icon"src="./images/add_a_photo_icon.svg" alt="add a photo icon" width="40px">
+                                </label>
+                            </div>
+                        </div>
+                        <button id="modal-post-btn">Post</button>
+                    </div>
                 </div>
             </div>
 
@@ -337,6 +383,73 @@
 
         </div>
     </div>
+
+    <script>
+        const fileInput = document.getElementById('image-file-input');
+
+            const statusInput = document.getElementById('status-input');
+
+            // statusInput.onclick = openModal;
+            statusInput.addEventListener('click', openModal);
+
+            // fileInput.onchange = openModal();
+            fileInput.addEventListener('change', openModal);
+
+            function openModal(e) {
+                // Get the modal
+                const modal = document.getElementById("create-post-modal");
+                modal.style.display = "block";
+
+                // Get the <span> element that closes the modal
+                const span = document.getElementsByClassName("close")[0];
+
+                const imgPreview = document.getElementById("image-preview");
+                const imagePreviewDiv = document.getElementsByClassName("image-preview-div")[0];
+                //const file = fileInput.files[0];
+                if (e.target.files) {
+                    const file = e.target.files[0];
+                    let reader = new FileReader();
+                    reader.readAsDataURL(file);
+                    reader.onload = function () {
+                        console.log(reader.result);
+                        imagePreviewDiv.style.display = "block";
+                        imgPreview.src = reader.result;
+
+                        const imagePreviewCloseBtn = document.getElementById("image-preview-close-btn");
+                        imagePreviewCloseBtn.onclick = function () {
+                            e.target.value = '';
+                            imagePreviewDiv.style.display = "none";
+                        }
+
+                    }
+                } else {
+                    document.getElementById('status-field-modal').focus();
+
+
+                }
+                // When the user clicks on <span> (x), close the modal
+                span.onclick = function () {
+                    modal.style.display = "none";
+                    e.target.value = '';
+                    imagePreviewDiv.style.display = "none";
+                }
+
+                // When the user clicks on <span> (x) on the imagePreviewDiv, hide the imagePreviewDiv, set e.target.value = '' 
+
+                // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function (event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                        e.target.value = '';
+                        imagePreviewDiv.style.display = "none";
+                    }
+                }
+
+            }
+
+
+        
+    </script>
 
 
 </body>

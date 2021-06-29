@@ -951,4 +951,11 @@ ul .profile-image {
     margin-top: 81px;
   }
 }
+
+@media (max-width: 501px) {
+  .friendrequest-list .container .request_container {
+    padding-left: 2em;
+    padding-right: 4em;
+  }
+}
 /*# sourceMappingURL=friendrequest.css.map */
