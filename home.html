@@ -17,10 +17,18 @@
                     <img class="logo" src="./images/kidconnect_logo_mobile.svg" alt="kidconnect logo">
                 </a>
 
+                <img class="back-btn-desktop" src="./images/back_icon.svg">
+
                 <div class="search">
-                    <img src="./images/search_icon.svg" alt="">
-                    <input type="text" placeholder="Search friends in KidConnect">
+                    <img class="search-icon-desktop" src="./images/search_icon.svg" alt="">
+                    <input id="search-input-desktop" type="text" placeholder="Search friends in KidConnect">
                 </div>
+
+                <div class="search-results-dropdown-desktop">
+                    
+
+                </div>
+
             </div>
 
             <ul class="left-nav">
@@ -448,6 +456,39 @@
             }
 
 
+            const backBtnDesktop = document.getElementsByClassName("back-btn-desktop")[0];
+
+            const searchInputDesktop = document.getElementById("search-input-desktop");
+
+            const searchIconDesktop = document.getElementsByClassName("search-icon-desktop")[0];
+
+            const logo = document.getElementsByClassName("logoAndSearch")[0].getElementsByTagName("a")[0];
+
+            const searchResultsDropdownDesktop = document.getElementsByClassName("search-results-dropdown-desktop")[0];
+        
+            searchInputDesktop.addEventListener("focus", searchInputDesktopClicked);
+            searchInputDesktop.addEventListener("change", searchInputDesktopChanged);
+
+            function searchInputDesktopClicked() {
+                searchIconDesktop.style.display = "none";
+                logo.style.display = "none";
+                
+                backBtnDesktop.style.display = "block";
+            }
+
+            backBtnDesktop.onclick = backBtnDesktopClicked;
+
+            function backBtnDesktopClicked() {
+                 searchIconDesktop.style.display = "block";
+                logo.style.display = "block";
+
+                backBtnDesktop.style.display = "none";
+                searchResultsDropdownDesktop.style.display = "none";
+            }
+
+            function searchInputDesktopChanged() {
+                searchResultsDropdownDesktop.style.display = "block";
+            }
         
     </script>
 

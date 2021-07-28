@@ -52,6 +52,11 @@ body {
 
 .logoAndSearch {
   display: flex;
+  position: relative;
+}
+
+.back-btn-desktop {
+  display: none;
 }
 
 .search {
@@ -83,6 +88,15 @@ body {
       }
     }
   }
+}
+
+.search-results-dropdown-desktop {
+  height: 250px;
+  width: 350px;
+  background-color: white;
+  position: absolute;
+  top: 48px;
+  left: 0;
 }
 
 ul {
